@@ -17,8 +17,9 @@
 
 #### 项目截图
 
-![screenshot1] (./assets/screenshot1.png)
-![screenshot2] (./assets/screenshot2.png)
+<img src="https://s1.ax1x.com/2022/09/12/vXBakt.jpg">
+
+<img src="https://s1.ax1x.com/2022/09/01/v5Dt0g.jpg">
 
 #### 怎么对接
 
