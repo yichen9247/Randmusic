@@ -32,7 +32,8 @@
     <meta property="og:title" content="随机网易云" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://p3.music.126.net/tBTNafgjNnTL1KlZMt7lVA==/18885211718935735.jpg" />
-    <meta property="og:url" content="https://music.yunair.cn/" />
+    <?php echo '<meta property="og:url" content="'.$website_url.'" />'; ?>
+    
     <meta property="og:site_name" content="随机网易云"/>
 	<title>随机网易云</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/4.6.0/css/bootstrap.min.css">
@@ -147,39 +148,39 @@
       echo "\n";
       }
     if($texiao_dianji == 1) {
-      echo '<script src="https://music.yunair.cn/assets/JavaScript/texiao_dianji.js"></script>';
+      echo '<script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_dianji.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 2) {
-      echo '  <script src="https://music.yunair.cn/assets/JavaScript/texiao_aixin.js"></script>';
+      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_aixin.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 3) {
-      echo '<script src="https://music.yunair.cn/assets/JavaScript/texiao_yinghua.js"></script>';
+      echo '<script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yinghua.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 4) {
-      echo '  <script src="https://music.yunair.cn/assets/JavaScript/texiao_zhizhu.js"></script>';
+      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_zhizhu.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 5) {
-      echo '  <script src="https://music.yunair.cn/assets/JavaScript/texiao_xiannu.js"></script>';
+      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_xiannu.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 6) {
-      echo '  <script src="https://music.yunair.cn/assets/JavaScript/texiao_face.js"></script>';
+      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_face.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 7) {
-      echo '  <script src="https://music.yunair.cn/assets/JavaScript/texiao_paopao.js"></script>';
+      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_paopao.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 8) {
-      echo '  <script src="https://music.yunair.cn/assets/JavaScript/texiao_yanhua.js"></script>';
+      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yanhua.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 9) {
-      echo '  <script src="https://music.yunair.cn/assets/JavaScript/texiao_text.js"></script>';
+      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_text.js"></script>';
       echo "\n";
       }
   ?>
