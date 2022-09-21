@@ -3,7 +3,7 @@
 > 一款基于网易云音乐嵌入型随机音乐播放器
 
 - QQ交流群：786664852
-- Gitub仓库：https://github.com/XunZhiCloud/RandMusic
+- Gitub仓库：https://github.com/yichen9247/Randmsuic
 - 项目宗旨：简洁、超强、开源、精华、随机
 
 #### 项目简介：
