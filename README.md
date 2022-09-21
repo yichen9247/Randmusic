@@ -4,7 +4,7 @@
 
 - QQ交流群：786664852
 - 官方演示：https://music.yunair.cn
-- Gitub仓库：https://github.com/yichen9247/Randmsuic
+- Gitub仓库：https://github.com/yichen9247/Randmusic
 - 项目宗旨：简洁、超强、开源、精华、随机
 
 #### 项目简介：
