@@ -3,6 +3,7 @@
 > 一款基于网易云音乐嵌入型随机音乐播放器
 
 - QQ交流群：786664852
+- 官方演示：https://music.yunair.cn
 - Gitub仓库：https://github.com/yichen9247/Randmsuic
 - 项目宗旨：简洁、超强、开源、精华、随机
 
@@ -14,13 +15,24 @@
 4. 项目依赖MDUI、LayUi、Bootstrap等响应式布局包，优雅美观。
 5. 项目在一切可能暴露的接口上，屏蔽SQL注入、XSS攻击风险，提供安全保障。
 
+#### 项目截图
+
+![screenshot1] (./assets/screenshot1.png)
+![screenshot2] (./assets/screenshot2.png)
+
+#### 怎么对接
+
+[点击查看项目文档](https://yunair.cn/?p=44)
+
 #### 项目要求
 
 * PHP 版本 &ge; 7.2
 
 #### 使用说明
 
-[点击查看项目使用说明](https://yunair.cn/?p=44)
+* 配置简单，开箱即用
+* 在 `config.php` 配置一下信息即可使用
+* 随机网易云分支（歌单系统）路径：`/Musicsheet/`
 
 #### 项目开发
 
@@ -43,8 +55,6 @@
 │      ├── screenshot1.png 项目截图一
 
 │      ├── screenshot1.png 项目截图二
-
-│      ├── Live2D-widget.main.js 看板娘源文件
 
 ├── Musicsheet 基于首页分支的歌单系统目录
 
