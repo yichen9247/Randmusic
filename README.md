@@ -55,7 +55,7 @@
 
 │      ├── screenshot1.png 项目截图一
 
-│      ├── screenshot1.png 项目截图二
+│      ├── screenshot2.png 项目截图二
 
 ├── Musicsheet 基于首页分支的歌单系统目录
 
@@ -72,6 +72,8 @@
 └── robots.txt 爬虫、蜘蛛等索引文件
 
 ## 更新日志
+
+2022-09-23： 修复全局CSS引入源。
 
 2022-09-19： 修改了全局对接方式。
 
