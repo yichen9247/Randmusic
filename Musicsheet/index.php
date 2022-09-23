@@ -32,7 +32,7 @@
 
 	<title>随机网易云</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/4.6.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.7.6/css/layui.css">
     <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
   </head>
@@ -103,39 +103,39 @@
       echo "\n  ";
       }
     if($texiao_dianji == 1) {
-      echo '<script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_dianji.js"></script>';
+      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_dianji.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 2) {
-      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_aixin.js"></script>';
+      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_aixin.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 3) {
-      echo '<script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yinghua.js"></script>';
+      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yinghua.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 4) {
-      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_zhizhu.js"></script>';
+      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_zhizhu.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 5) {
-      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_xiannu.js"></script>';
+      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_xiannu.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 6) {
-      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_face.js"></script>';
+      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_face.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 7) {
-      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_paopao.js"></script>';
+      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_paopao.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 8) {
-      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yanhua.js"></script>';
+      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yanhua.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 9) {
-      echo '  <script src="https://cdn.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_text.js"></script>';
+      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_text.js"></script>';
       echo "\n";
       }
   ?>
@@ -170,5 +170,5 @@
         }
     });
   </script>
-  <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"></script>
   </body></html>
