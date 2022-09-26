@@ -63,6 +63,8 @@
 
 │      ├── gedan_res 网易云歌单ID存储目录
 
+│      ├── online.txt 网站Cookies存储文件
+
 │      └── index.php 歌单系统页面
 
 ├── music_res 网易云音乐ID存储目录
@@ -70,6 +72,8 @@
 ├── index.php 首页页面
 
 ├── config.php 网站全局配置文件
+
+├── online.txt 网站Cookies存储文件
 
 └── robots.txt 爬虫、蜘蛛等索引文件
 
