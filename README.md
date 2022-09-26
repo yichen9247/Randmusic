@@ -69,7 +69,9 @@
 
 ├── music_res 网易云音乐ID存储目录
 
-├── index.php 首页页面
+├── index.php 随机网易云首页页面
+
+├── functions.php 网站函数配置文件
 
 ├── config.php 网站全局配置文件
 
