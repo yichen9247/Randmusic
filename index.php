@@ -144,7 +144,7 @@
       echo '    </div>';
       echo "\n  ";
       }
-    if($website_debug == true) {
+    if($website_debug == 1) {
       echo '  <div class="debug"><hr/>';
       echo "\n    ";
       echo '  <h5 class="mdui-text-color-white" style="text-align:center;">';
@@ -228,4 +228,5 @@
     });
   </script>
   <script src="https://fastly.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"></script>
+  <!-- 2019-2022 © Reah-随机网易云(https://music.yunair.cn) -->
   </body></html>
