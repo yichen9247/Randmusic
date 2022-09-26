@@ -45,29 +45,30 @@
   if($dark==0) {
     echo '<body class="0" style="overflow:hidden;">';
     echo "\n";
+    echo " ";
     } else
   if($dark==1) {
     echo '<body class="mdui-theme-layout-dark" style="overflow:hidden">';
     echo "\n";
+    echo " ";
     } else 
   if($dark==2) {
     echo '<body class="0" style="overflow:hidden; background-color:black;">';
     echo "\n";
+    echo " ";
     } else {
     echo '<body class="0" style="overflow:hidden;">';
     echo "\n";
-    }
-  ?>
-  <?php
     echo " ";
-    if((!file_exists('./music_res/music_list.dat'))||(!file_exists('./music_res/pure_music.dat'))||(!file_exists('./music_res/english_music.dat'))) {
+    }
+  if((!file_exists('./music_res/music_list.dat'))||(!file_exists('./music_res/pure_music.dat'))||(!file_exists('./music_res/english_music.dat'))) {
       echo '<div class="mdui-typo-display-1-opacity">错误：数据加载失败！</div>';
       echo "\n    ";
       }
   ?>
- <div class="music">
  <?php
-   echo "     ";
+   echo '  <div class="music">';
+   echo "\n      ";
    if($type==1) {
      if($song==0) {
        # 全部音乐[pure_music.dat]
@@ -120,17 +121,28 @@
        echo '<div class="mdui-typo-display-1-opacity">错误：数据加载失败！</div>';
        }
     }
+    echo '    </div>';
   ?>
-    </div>
-    <div class="layui-anim layui-anim-up">
-      <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云</button>
-    </div>
   <?php
+    echo "\n  ";
+    echo '  <div class="layui-anim layui-anim-up">';
+    echo "\n  ";
     if($m == 1) {
       $live2d_status = false;
        } else
     if($m == 0) {
       $live2d_vOffset = -50;
+      }
+    if($website_online == true) {
+      echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云（'.online_users().'人在线）</button>';
+      echo "\n";
+      echo '    </div>';
+      echo "\n  ";
+      } else {
+      echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云</button>';
+      echo "\n";
+      echo '    </div>';
+      echo "\n  ";
       }
     if($website_debug == true) {
       echo '  <div class="debug"><hr/>';
@@ -148,7 +160,7 @@
       echo "\n";
       }
     if($texiao_dianji == 1) {
-      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_dianji.js"></script>';
+      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_dianji.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 2) {
@@ -156,7 +168,7 @@
       echo "\n";
       } else
     if($texiao_dianji == 3) {
-      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yinghua.js"></script>';
+      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yinghua.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 4) {
