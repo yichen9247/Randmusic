@@ -3,6 +3,7 @@
   <?php
     header('Content-type: text/html; charset=utf-8');
     include '../config.php';
+    include '../functions.php';
     $m = $_GET["m"];
     if($m=="") {
       $m = 0;
@@ -183,4 +184,5 @@
     });
   </script>
   <script src="https://fastly.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"></script>
-  </body></html>
+  <!-- 2019-2022 © Reah-随机网易云(https://music.yunair.cn) -->
+  </body><?php echo '<!-- 加载耗时：'.timer_get().'-->';?></html>
