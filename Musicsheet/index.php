@@ -40,29 +40,30 @@
   if($dark==0) {
     echo '<body class="0" style="overflow:hidden;">';
     echo "\n";
+    echo " ";
     } else
   if($dark==1) {
     echo '<body class="mdui-theme-layout-dark" style="overflow:hidden">';
     echo "\n";
+    echo " ";
     } else 
   if($dark==2) {
     echo '<body class="0" style="overflow:hidden; background-color:black;">';
     echo "\n";
+    echo " ";
     } else {
     echo '<body class="0" style="overflow:hidden;">';
     echo "\n";
-    }
-  ?>
-  <?php
     echo " ";
-    if((!file_exists('./gedan_res/play_music.dat'))) {
+    }
+  if((!file_exists('./gedan_res/play_music.dat'))) {
       echo '<h1>数据文件不存在！</h1>';
       echo "\n    ";
       }
   ?>
- <div class="music">
   <?php
-  echo "    ";
+  echo ' <div class="music">';
+  echo "\n      ";
   if($type==1) {
        $a=file('./gedan_res/play_music.dat');
        $music=rand(0,count(file('./gedan_res/play_music.dat')));
@@ -75,19 +76,30 @@
        echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=110 src="https://music.163.com/outchain/player?type=0&id='.$a[$music].'&auto='.$radio.'&height=90"></iframe>';
        echo "\n";
     }
+  echo '  </div>';
   ?>
-    </div>
-    <div class="layui-anim layui-anim-up">
-      <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云</button>
-    </div>
   <?php
+    echo "\n  ";
+    echo '  <div class="layui-anim layui-anim-up">';
+    echo "\n  ";
     if ($m == 1) {
       $live2d_status = false;
        } else
     if ($m == 0) {
       $vOffset = -50;
       }
-    if($website_debug == 1) {
+    if($website_online == true) {
+      echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云（'.online_users().'人在线）</button>';
+      echo "\n";
+      echo '    </div>';
+      echo "\n  ";
+      } else {
+      echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云</button>';
+      echo "\n";
+      echo '    </div>';
+      echo "\n  ";
+      }
+    if($website_debug == true) {
       echo '  <div class="debug"><hr/>';
       echo "\n    ";
       echo '  <h5 class="mdui-text-color-white" style="text-align:center;">';
@@ -99,7 +111,7 @@
       echo "\n  ";
       }
     if($live2d_status == true) {
-      echo '  <script src="https://assets.1ilo.com/live2d/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>';
+      echo '<script src="https://assets.1ilo.com/live2d/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>';
       echo "\n  ";
       }
     if($texiao_dianji == 1) {
@@ -107,7 +119,7 @@
       echo "\n";
       } else
     if($texiao_dianji == 2) {
-      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_aixin.js"></script>';
+      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_aixin.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 3) {
@@ -115,27 +127,27 @@
       echo "\n";
       } else
     if($texiao_dianji == 4) {
-      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_zhizhu.js"></script>';
+      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_zhizhu.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 5) {
-      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_xiannu.js"></script>';
+      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_xiannu.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 6) {
-      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_face.js"></script>';
+      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_face.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 7) {
-      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_paopao.js"></script>';
+      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_paopao.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 8) {
-      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yanhua.js"></script>';
+      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yanhua.js"></script>';
       echo "\n";
       } else
     if($texiao_dianji == 9) {
-      echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_text.js"></script>';
+      echo '<script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_text.js"></script>';
       echo "\n";
       }
   ?>
