@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.7.6/css/layui.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
   </head>
   <?php
@@ -90,12 +91,20 @@
       $vOffset = -50;
       }
     if($website_online == true) {
-      echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云（'.online_users().'人在线）</button>';
+      if($website_icons == true) {
+        echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();"><i class="mdui-icon material-icons fa-spin">face</i>&nbsp;&nbsp;随机网易云（'.online_users().'人在线）</button>';
+        } else {
+        echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云（'.online_users().'人在线）</button>';
+        }
       echo "\n";
       echo '    </div>';
       echo "\n  ";
       } else {
-      echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云</button>';
+      if($website_icons == true) {
+        echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();"><i class="mdui-icon material-icons fa-spin">face</i>&nbsp;&nbsp;随机网易云</button>';
+        } else {
+        echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云</button>';
+        }
       echo "\n";
       echo '    </div>';
       echo "\n  ";
@@ -183,6 +192,7 @@
         }
     });
   </script>
+  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://fastly.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"></script>
   <!-- 2019-2022 © Reah-随机网易云(https://music.yunair.cn) -->
   </body><?php echo '<!-- 加载耗时：'.timer_get().'-->';?></html>
