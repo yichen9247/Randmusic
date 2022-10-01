@@ -20,8 +20,15 @@ $live2d_modelurl = ""; # 看板娘Live2D模板链接，详情请查看下发模�
 # 帅哥：https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json
 # 美女：https://unpkg.com/live2d-widget-model-epsilon2_1@1.0.5/assets/Epsilon2.1.model.json
 # 学生：https://unpkg.com/live2d-widget-model-tsumiki@1.0.5/assets/tsumiki.model.json
-# 小初音：https://unpkg.com/live2d-widget-model-nipsilon@1.0.5/assets/nipsilon.model.json
+# 茶杯犬：https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json
+# 圣职者：https://unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json
+# 绿毛妹：https://unpkg.com/live2d-widget-model-tsumiki@1.0.5/assets/tsumiki.model.json
 # 小可爱：https://unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json
+# 小阿狸：https://unpkg.com/live2d-widget-model-nico@1.0.5/assets/nico.model.json
+# 金龟妹：https://unpkg.com/live2d-widget-model-unitychan@1.0.5/assets/unitychan.model.json
+# 科技男：https://unpkg.com/live2d-widget-model-ni-j@1.0.5/assets/ni-j.model.json
+# 小初音①：https://unpkg.com/live2d-widget-model-nipsilon@1.0.5/assets/nipsilon.model.json
+# 小初音②：https://unpkg.com/live2d-widget-model-nito@1.0.5/assets/nito.model.json
 # 小可爱（男）：https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json
 # 小可爱（女）：https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json
 # Live2D备用链接：https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js
