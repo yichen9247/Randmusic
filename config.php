@@ -1,6 +1,7 @@
 <?php
 $website_url = ""; # 请在这里填写网站链接
 $texiao_dianji = 0;  # 1:气泡点击特效 2:爱心点击特效 3:樱花点击特效 4:蜘网点击特效 5:仙女点击特效 6:笑脸点击特效 7:泡泡点击特效 8:烟花点击特效 9:文字点击特效
+$website_icons = true; # 按钮内旋转图标显示开关
 $website_debug = true; # 网易云音乐ID显示开关
 $website_online = true; # 网站在线人数显示开关
 $live2d_status = true; # 看板娘Live2D显示开关
