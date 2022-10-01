@@ -19,9 +19,6 @@
 	nav a.active{
 		color: #71b3dd;
 	}
-	body {
-		background-color: #ecf0f3;
-		}
 	.container {
 		width: 300px;
 		height: 500px;
