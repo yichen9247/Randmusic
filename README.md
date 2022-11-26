@@ -2,6 +2,7 @@
 
 > 一款基于网易云音乐嵌入型随机音乐播放器
 
+- 项目作者：Mr.Hua
 - QQ交流群：786664852
 - 官方演示：https://music.yunair.cn
 - Gitub仓库：https://github.com/yichen9247/Randmusic
@@ -104,4 +105,4 @@
 ##  开源许可
 [GPL 3.0](https://opensource.org/licenses/GPL-3.0)
 
-Copyright (C) 2022  [随机网易云](https:/lmusic.yunair.cn/).
+Copyright (C) 2022  [随机网易云](https://music.yunair.cn/).
