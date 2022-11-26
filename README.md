@@ -1,13 +1,10 @@
-<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
-
 ## 随机网易云
 
 > 一款基于网易云音乐嵌入型随机音乐播放器
 
 - 项目作者：Mr.Hua
 - QQ交流群：786664852
-- 官方演示：https://music.yunair.cn <span color="red">[停止维护]</span>
-<span class="mdui-text-color-red">[停止维护]</span>
+- 官方演示：https://music.yunair.cn <span>[停止维护]</span>
 - Gitub仓库：https://github.com/yichen9247/Randmusic
 - 项目宗旨：简洁、超强、开源、精华、随机
 
