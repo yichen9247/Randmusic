@@ -64,7 +64,9 @@
 
 │      ├── gedan_res 网易云歌单ID存储目录
 
-│      └── index.php 歌单系统页面
+│      ├── index.php 歌单系统页面
+
+│      └── online.txt 网站在线人数缓存列表
 
 ├── music_res 网易云音乐ID存储目录
 
