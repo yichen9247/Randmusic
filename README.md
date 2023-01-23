@@ -5,7 +5,7 @@
 - 项目作者：Mr.Hua
 - QQ交流群：786664852
 - 官方演示：https://music.yunair.cn <span>[停止维护]</span>
-- Gitub仓库：https://github.com/yichen9247/Randmusic
+- Github仓库：https://github.com/yichen9247/Randmusic
 - 项目宗旨：简洁、超强、开源、精华、随机
 
 #### 项目简介：
