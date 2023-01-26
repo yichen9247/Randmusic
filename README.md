@@ -2,18 +2,17 @@
 
 > 一款基于网易云音乐嵌入型随机音乐播放器
 
-- 项目作者：Mr.Hua
 - QQ交流群：786664852
-- 官方演示：https://music.yunair.cn <span>[停止维护]</span>
-- Github仓库：https://github.com/yichen9247/Randmusic
+- 官方演示：https://music.yunair.cn
+- Gitub仓库：https://github.com/yichen9247/Randmusic
 - 项目宗旨：简洁、超强、开源、精华、随机
 
 #### 项目简介：
 
-1. 整包仅3.39MB，却实现超强功能，极其迅速的响应。
+1. 整包仅4.0Mb，却实现超强功能，极其迅速的响应。
 2. 极其漂亮的Live2D看板娘，提升您的线上听歌体验。
 3. 项目开箱即用，没有任何复杂的操作，无需像其他项目去特意创建个文件等。
-4. 项目依赖MDUI、LayUI、Bootstrap等响应式布局包，优雅美观。
+4. 项目依赖MDUI、LayUi、Bootstrap等响应式布局包，优雅美观。
 5. 项目在一切可能暴露的接口上，屏蔽SQL注入、XSS攻击风险，提供安全保障。
 
 #### 项目截图
@@ -37,6 +36,10 @@
 * 随机网易云分支（歌单系统）路径：`/Musicsheet/`
 * 收集网易云音乐ID到 'music_res` 和 `gedan_res` 内
 * 如果您已经配置完成并且收集完成，那就开始使用吧！
+
+#### 使用说明
+
+* 宝塔用户请注意缓存规则的正确配置，否则将导致每次刷新都是同一首歌的问题
 
 ## 项目开发
 
@@ -64,9 +67,7 @@
 
 │      ├── gedan_res 网易云歌单ID存储目录
 
-│      ├── index.php 歌单系统页面
-
-│      └── online.txt 网站在线人数缓存列表
+│      └── index.php 歌单系统页面
 
 ├── music_res 网易云音乐ID存储目录
 
@@ -74,11 +75,15 @@
 
 ├── config.php 网站全局配置文件
 
-├── online.txt 网站在线人数缓存列表
-
 └── robots.txt 爬虫、蜘蛛等索引文件
 
 ## 更新日志
+
+2022-01-26： 新增了全局黑白模式。
+
+2022-01-26： 修复自播失效的问题。
+
+2022-01-25： 新增按钮内旋转图标。
 
 2022-10-01： 新增按钮内旋转图标。
 
@@ -109,4 +114,4 @@
 ##  开源许可
 [GPL 3.0](https://opensource.org/licenses/GPL-3.0)
 
-Copyright (C) 2022  [随机网易云](https://music.yunair.cn/).
+Copyright (C) 2022  [随机网易云](https:/lmusic.yunair.cn/).
