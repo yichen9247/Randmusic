@@ -34,10 +34,26 @@
 	<title>随机网易云</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.7.6/css/layui.css">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <?php
+      if($website_icons == true) {
+        echo '    <link rel="stylesheet" href="https://cdn.ootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">';
+      }
+      echo "\n";
+    ?>
     <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823" />
   </head>
+  <?php
+    if($website_recolor == true) {
+      echo '<style type="text/css">';
+      echo "\n";
+      echo '    html{filter : grayscale(100%);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}';
+      echo "\n";
+      echo '  </style>';
+    }
+    echo "\n";
+  ?>
   <?php
   if($dark==0) {
     echo '<body class="0" style="overflow:hidden;">';
@@ -69,13 +85,13 @@
   if($type==1) {
        $a=file('./gedan_res/play_music.dat');
        $music=rand(0,count(file('./gedan_res/play_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=0&id='.$a[$music].'&auto='.$radio.'&height=32"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=0&id='.$a[$music].'&auto='.$auto.'&height=32"></iframe>';
        echo "\n";
     } else 
   if($type==0) {
        $a=file('./gedan_res/play_music.dat');
        $music=rand(0,count(file('./gedan_res/play_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=110 src="https://music.163.com/outchain/player?type=0&id='.$a[$music].'&auto='.$radio.'&height=90"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=110 src="https://music.163.com/outchain/player?type=0&id='.$a[$music].'&auto='.$auto.'&height=90"></iframe>';
        echo "\n";
     }
   echo '  </div>';
@@ -191,6 +207,17 @@
           
         }
     });
+  </script>
+  <script type"text/javascript">
+    <?php
+      if($a[$music]=="") {
+        echo 'window.location.reload();';
+        echo "\n";
+      } else {
+        echo 'console.log("page load success!")';
+        echo "\n";
+      }
+    ?>
   </script>
   <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://fastly.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"></script>
