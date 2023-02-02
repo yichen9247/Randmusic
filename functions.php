@@ -1,5 +1,4 @@
 <?php
-
 function online_users() {
     $filename='online.txt';
     $cookiename='Nanlon_OnLineCount';
@@ -21,7 +20,7 @@ function online_users() {
            do{
                $vid++; 
                $uid='U'.$vid; 
-               }while(array_key_exists($uid,$nowonline)); 
+               } while (array_key_exists($uid,$nowonline)); 
              setcookie($cookiename,$uid); 
         } 
         $nowonline[$uid]=$nowtime;
@@ -42,10 +41,10 @@ function online_users() {
     
 function timer_get( $display = 0, $precision = 3 ) {
     $timestart = $_SERVER ['REQUEST_TIME'];
-    $mtime     = explode( ' ', microtime() );
-    $timeend   = $mtime[1] + $mtime[0];
+    $mtime = explode( ' ', microtime() );
+    $timeend = $mtime[1] + $mtime[0];
     $timetotal = number_format( $timeend - $timestart, $precision );
-    $r         = $timetotal < 1 ? $timetotal * 1000 . " MS" : $timetotal . " S";
+    $r = $timetotal < 1 ? $timetotal * 1000 . " MS" : $timetotal . " S";
     if ( $display ) {
         echo $r;
     }
