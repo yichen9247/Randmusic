@@ -104,12 +104,12 @@
   ?>
   <?php
     echo "\n  ";
-    echo '  <div class="layui-anim layui-anim-up">';
-    echo "\n  ";
     if($m == 1) {
       $live2d_status = false;
     } else
     if($m == 0) {
+      echo '  <div class="layui-anim layui-anim-up">';
+      echo "\n  ";
       $live2d_vOffset = -50;
       if($website_online == true) {
         if($website_icons == true) {
