@@ -2,9 +2,9 @@
 $website_url = ""; # 请在这里填写网站链接
 $texiao_dianji = 0;  # 1:气泡点击特效 2:爱心点击特效 3:樱花点击特效 4:蜘网点击特效 5:仙女点击特效 6:笑脸点击特效 7:泡泡点击特效 8:烟花点击特效 9:文字点击特效
 $website_icons = false; # 按钮内旋转图标显示开关
-$website_debug = true; # 网易云音乐ID显示开关
-$website_online = true; # 网站在线人数显示开关
-$live2d_status = true; # 看板娘Live2D显示开关
+$website_debug = false; # 网易云音乐ID显示开关
+$website_online = false; # 网站在线人数显示开关
+$live2d_status = false; # 看板娘Live2D显示开关
 $website_recolor = false; # 网站全局黑白模式开关
 $live2d_width = 100; # 看板娘宽度，默认是：100
 $live2d_height = 200; # 看板娘高度，默认是：200
@@ -15,9 +15,9 @@ $live2d_modelurl = "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/ko
 
 # ==================== 以下为发信邮箱设置 ====================
 
-$mail_host = ""; # 邮件主机名，例如：smtp.163.com
+$mail_host = "smtp.qq.com"; # 邮件主机名，例如：smtp.163.com
 $mail_port = 443; # 邮件发送端口，详情自行百度
-$mail_secure = "TLS"; # 邮件发送协议：TLS/SSL
+$mail_secure = "SSL"; # 邮件发送协议：TLS/SSL
 $mail_isHTML = true; # 设置邮件发送为HTML模式
 $mail_adminmai = ""; # 管理员邮箱账号
 $mail_username = ""; # 邮箱账号/地址
