@@ -5,13 +5,13 @@ require_once("./config.php");
 require_once("PHPMailer/PHPMailer.php");
 require_once("PHPMailer/class.smtp.php");
 
-$content = $_GET['content'];
+$mid = $_GET['mid'];
+$song = $_GET['song'];
 $GetUserIP = $_SERVER["REMOTE_ADDR"];
 
 $mail = new PHPMailer();
 $mail->isSMTP();
 $mail->SMTPDebug = 1;
-$mail->Body = $content;
 $mail->CharSet = 'UTF-8';
 $mail->SMTPAuth = true;
 $mail->Host = $mail_host;
@@ -24,14 +24,16 @@ $mail->SMTPSecure = $mail_secure;
 $mail->Username = $mail_username;
 $mail->Password = $mail_password;
 
-if ($_GET['type'] == "" || $_GET['content'] == "") {
+if ($_GET['type'] == "" || $_GET['song'] == ""|| $_GET['mid'] == "") {
     echo 'ERROR非法请求！';
 } else
 if ($_GET['type'] == 1) {
     $mail->Subject = '【随机网易云】反馈通知 IP：'.$GetUserIP;
+    $mail->Body = '某热心网友反馈了音乐，该音乐可能有问题<br/><center><hr/>失效的ID ：['.$song.']'.$mid.'<hr/></center><br/>PS：请仔细核实该ID，若该ID确实已经失效，还请站长删除该ID以提升体验！<br/><br/>温馨提示：请将此邮箱加入到邮箱白名单，以免被当作成广告邮件！';
 } else 
 if ($_GET['type'] == 2) {
-    $mail->Subject = '【随机网易云】资源未获取通知';
+    $mail->Subject = '【随机网易云】反馈通知 IP：'.$GetUserIP;
+    $mail->Body = '某热心网友反馈了歌单，该歌单可能有问题<br/><center><hr/>失效的ID ：['.$song.']'.$mid.'<hr/></center><br/>PS：请仔细核实该ID，若该ID确实已经失效，还请站长删除该ID以提升体验！<br/><br/>温馨提示：请将此邮箱加入到邮箱白名单，以免被当作成广告邮件！';
 } else {
     echo 'ERROR非法请求！';
 }
