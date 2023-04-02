@@ -133,7 +133,7 @@
       if($website_debug == 1) {
         echo '  <div class="mdui-dialog" id="feedback">';
         echo "\n  ";
-        echo '      <div class="mdui-dialog-title"><i class="mdui-icon material-icons mdui-text-color-blue">info_outline</i> 是否反馈该歌单?</div>';
+        echo '      <div class="mdui-dialog-title"><i class="mdui-icon material-icons mdui-text-color-blue">info_outline</i> 是否反馈该歌曲?</div>';
         echo "\n  ";
         echo '      <div class="mdui-dialog-content">当网易云音乐无法播放时或者是歌单存在不适等，您可以向站长反馈该首歌单。</div>';
         echo "\n  ";
@@ -245,7 +245,7 @@
         
         var theid = <?php echo $a[$music]; ?>
         var feedback = new XMLHttpRequest();
-        feedback ['\x6f\x70\x65\x6e']('\x67\x65\x74','\x2f\x73\x65\x6e\x64\x6d\x61\x69\x6c\x2e\x70\x68\x70\x3f\x74\x79\x70\x65\x3d\x31\x26\x63\x6f\x6e\x74\x65\x6e\x74\x3d\u67d0\u70ed\u5fc3\u7f51\u53cb\u53cd\u9988\u4e86\u6b4c\u5355\uff0c\u8be5\u6b4c\u5355\u53ef\u80fd\u6709\u95ee\u9898\x3c\x62\x72\x2f\x3e\x3c\x63\x65\x6e\x74\x65\x72\x3e\x3c\x68\x72\x2f\x3e\u5931\u6548\u7684\x49\x44 \uff1a\x5b'+song+'\x5d'+theid+'\x3c\x68\x72\x2f\x3e\x3c\x2f\x63\x65\x6e\x74\x65\x72\x3e\x3c\x62\x72\x2f\x3e\x50\x53\uff1a\u8bf7\u4ed4\u7ec6\u6838\u5b9e\u8be5\x49\x44\uff0c\u82e5\u8be5\x49\x44\u786e\u5b9e\u5df2\u7ecf\u5931\u6548\uff0c\u8fd8\u8bf7\u7ad9\u957f\u5220\u9664\u8be5\x49\x44\u4ee5\u63d0\u5347\u4f53\u9a8c\uff01\x3c\x62\x72\x2f\x3e\x3c\x62\x72\x2f\x3e\u6e29\u99a8\u63d0\u793a\uff1a\u8bf7\u5c06\u6b64\u90ae\u7bb1\u52a0\u5165\u5230\u90ae\u7bb1\u767d\u540d\u5355\uff0c\u4ee5\u514d\u88ab\u5f53\u4f5c\u6210\u5e7f\u544a\u90ae\u4ef6\uff01',true);
+        feedback.open('get','/sendmail.php?type=2&song='  + song + '&mid=' + theid,true);
         feedback.send();
         window.setTimeout("alert('感谢您的反馈！');",1000);
     };
