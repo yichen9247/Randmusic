@@ -290,7 +290,7 @@
         
         var theid = <?php echo $a[$music]; ?>
         var feedback = new XMLHttpRequest();
-        feedback.open('get','/sendmail.php?type=1&song='  + song + '&mid=' + theid,true);
+        feedback.open('get','/sendmail.php?type=1&song=' + song + '&mid=' + theid,true);
         feedback.send();
         window.setTimeout("alert('感谢您的反馈！');",1000);
     };
