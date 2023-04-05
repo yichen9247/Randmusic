@@ -130,12 +130,12 @@
         echo '    </div>';
         echo "\n  ";
         }
-      if($website_debug == 1) {
+      if($website_feedback == 1) {
         echo '  <div class="mdui-dialog" id="feedback">';
         echo "\n  ";
-        echo '      <div class="mdui-dialog-title"><i class="mdui-icon material-icons mdui-text-color-blue">info_outline</i> 是否反馈该歌曲?</div>';
+        echo '      <div class="mdui-dialog-title"><i class="mdui-icon material-icons mdui-text-color-blue">&#xe88f;</i> 是否反馈该歌单?</div>';
         echo "\n  ";
-        echo '      <div class="mdui-dialog-content">当网易云音乐无法播放时或者是歌单存在不适等，您可以向站长反馈该首歌单。</div>';
+        echo '      <div class="mdui-dialog-content">当网易云歌单无法播放时或者是歌单存在不适等，您可以向站长反馈这个歌单。</div>';
         echo "\n  ";
         echo '      <div class="mdui-dialog-actions">';
         echo "\n  ";
@@ -146,15 +146,8 @@
         echo '      </div>';
         echo "\n  ";
         echo '  </div>';
-        echo "\n  ";
-        echo '  <div class="debug"><hr/>';
-        echo "\n    ";
-        echo '  <h5 class="mdui-text-color-white" mdui-dialog="{target: \'#feedback\'}" style="text-align:center;">';
-        echo "\n  ";
-        echo '      ['.$song.']ID:'.$a[$music].'';
-        echo '      </h5>';
-        echo "\n    ";
-        echo '</div>';
+        echo "\n";
+        echo '    <button class="mdui-fab mdui-fab-fixed mdui-text-color-cyan mdui-color-blue-50" mdui-dialog="{target: \'#feedback\'}" style="bottom: 35px;"><i class="mdui-icon material-icons">&#xe163;</i></button>';
         echo "\n";
         }
       if($live2d_status == true) {
@@ -261,5 +254,5 @@
       echo "\n";
     }
   ?>
-  <!-- 2019-2022 © Reah-随机网易云(https://music.yunair.cn) -->
+  <!-- 2019-2023 © Reah-随机网易云(https://music.yunair.cn) -->
   </body><?php echo '<!-- 加载耗时：'.timer_get().'-->';?></html>
