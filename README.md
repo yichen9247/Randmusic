@@ -32,7 +32,7 @@
 #### 使用说明
 
 * 配置简单，开箱即用
-* 在 `config.php` 配置一下信息即可使用
+* 在 `Core/Config/config.php` 配置一下信息即可使用
 * 随机网易云分支（歌单系统）路径：`/index2.php`
 * 收集网易云音乐ID到 `Musicidlist/music_res` 和 `Musicidlist/gedan_res` 内
 * 如果您已经配置完成并且收集完成，那就开始使用吧！
