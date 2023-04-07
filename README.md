@@ -33,8 +33,8 @@
 
 * 配置简单，开箱即用
 * 在 `config.php` 配置一下信息即可使用
-* 随机网易云分支（歌单系统）路径：`/Musicsheet/`
-* 收集网易云音乐ID到 `music_res` 和 `gedan_res` 内
+* 随机网易云分支（歌单系统）路径：`/index2.php`
+* 收集网易云音乐ID到 `Musicidlist/music_res` 和 `Musicidlist/gedan_res` 内
 * 如果您已经配置完成并且收集完成，那就开始使用吧！
 
 #### 注意事项
@@ -51,8 +51,6 @@
 
 ├── assets 项目静态资源目录
 
-├── PHPMailer 邮件系统目录
-
 │      ├── bootstrap Bootstrap框架目录
 
 │      ├── mdui-v1.0.2 MDUI框架目录
@@ -63,25 +61,59 @@
 
 │      ├── screenshot1.png 项目截图一
 
-│      ├── screenshot2.png 项目截图二
+│      └── screenshot2.png 项目截图二
 
-├── Musicsheet 基于首页分支的歌单系统目录
+├── Core 网站核心文件目录
+
+│      ├── Config 网站信息配置目录
+
+│      ├── Database 数据库信息配置目录
+
+│      └── init.php 网站初始化索引文件
+
+├── Include 网站包含文件目录
+
+│      ├── Onlinecatch 在线人数记录文件
+
+│      ├── PHPMailer 邮件发送系统目录
+
+│      ├── Comment.php 网站公共函数文件
+
+│      ├── Functions.php 网站公共函数文件
+
+│      ├── Index.php 网站首页展示文件
+
+│      └── Index2.php 歌单页面展示文件
+
+├── Template 网站模板文件目录
+
+│      ├── Home 主页模板目录
+
+│      ├── Admin 后台模板目录
+
+│      └── Install 安装模板目录
+
+├── Musicidlist 网易云音乐ID存储目录
 
 │      ├── gedan_res 网易云歌单ID存储目录
 
-│      └── index.php 歌单系统页面
+│      └── music_res 网易云音乐ID存储目录
 
-├── music_res 网易云音乐ID存储目录
+├── index.php 网站首页文件
 
-├── index.php 首页页面
+├── index2.php 歌单页面文件
 
 ├── sendmail.php 邮件发送文件
+
+├── 404.html 网站404默认页面
 
 ├── config.php 网站全局配置文件
 
 └── robots.txt 爬虫、蜘蛛等索引文件
 
 ## 更新日志
+
+2023-04-07： 随机网易云整体重构。
 
 2023-04-07： 新增MDUI框架新样式。
 
