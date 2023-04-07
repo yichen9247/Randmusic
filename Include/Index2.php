@@ -4,25 +4,21 @@
     $m = $_GET["m"];
     if($m=="") {
       $m = 0;
-      }
+    }
     $dark = $_GET["dark"];
     if($dark=="") {
       $dark = 0;
-      }
+    }
     $type = $_GET["type"];
     if($type=="") {
       $type = 0;
-      }
-    $song = $_GET["song"];
-    if($song=="") {
-      $song = 0;
-      }
+    }
     $auto = $_GET["auto"];
     if($auto=="") {
       $auto = 0;
-      }
+   }
   ?>
-<head>
+  <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="keywords" content="随机网易云" />
     <meta name="description" content="随机网易云是一款随机获取网易云歌曲和歌单的播放器，适合个人博客站长嵌入网页。" />
@@ -30,9 +26,8 @@
     <meta property="og:title" content="随机网易云" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://p3.music.126.net/tBTNafgjNnTL1KlZMt7lVA==/18885211718935735.jpg" />
-    <?php echo '<meta property="og:url" content="'.$website_url.'" />'; ?>
-    
-    <meta property="og:site_name" content="随机网易云"/>
+    <?php echo '<meta property="og:url" content="'.$website_url.'/Musicsheet/" />'; ?>
+
 	<title>随机网易云</title>
     <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823">
     <?php
@@ -86,69 +81,29 @@
     echo "\n";
     echo " ";
   }
-  if((!file_exists(__MUSICLIDT_DIR__.'/music_res/music_list.dat'))||(!file_exists(__MUSICLIDT_DIR__.'/music_res/pure_music.dat'))||(!file_exists(__MUSICLIDT_DIR__.'/music_res/english_music.dat'))) {
-      echo '<div class="mdui-typo-display-1-opacity">错误：数据加载失败！</div>';
+  if((!file_exists(__MUSICLIDT_DIR__.'/gedan_res/play_music.dat'))) {
+      echo '<h1>数据文件不存在！</h1>';
       echo "\n    ";
   }
   ?>
- <?php
-   echo '  <div class="music">';
-   echo "\n      ";
-   if($type==1) {
-     if($song==0) {
-       # 全部音乐[pure_music.dat]
-       $a=file(__MUSICLIDT_DIR__.'/music_res/music_list.dat');
-       $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/music_list.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=32"></iframe>';
-       echo "\n";
-     } else 
-     if($song==1) {
-       # 纯音类型[pure_music.dat]
-       $a=file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat');
-       $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=32"></iframe>';
-       echo "\n";
-     } else 
-     if($song==2) {
-       # 英文类型[english_music.dat]
-       $a=file(__MUSICLIDT_DIR__.'/music_res/english_music.dat');
-       $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/english_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=32"></iframe>';
-       echo "\n";
-     } else {
-       # 加载失败[Error_LodeFaild]
-       echo '<div class="mdui-typo-display-1-opacity">错误：数据加载失败！</div>';
-     }
-   } else 
-   if($type==0) {
-     if($song==0) {
-       # 全部音乐[music_list.dat]
-       $a=file(__MUSICLIDT_DIR__.'/music_res/music_list.dat');
-       $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/music_list.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=66"></iframe>';
-       echo "\n";
-       } else
-     if($song==1) {
-       # 纯音类型[pure_music.dat]
-       $a=file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat');
-       $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=66"></iframe>';
-       echo "\n";
-       } else 
-     if($song==2) {
-       # 英文类型[english_music.dat]
-       $a=file(__MUSICLIDT_DIR__.'/music_res/english_music.dat');
-       $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/english_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=66"></iframe>';
-       echo "\n";
-       } else {
-       # 加载失败[Error_LodeFaild]
-       echo '<div class="mdui-typo-display-1-opacity">错误：数据加载失败！</div>';
-       }
-    }
-    echo '    </div>';
-  ?>
   <?php
+  echo ' <div class="music">';
+  echo "\n      ";
+  if($type==1) {
+       $a=file(__MUSICLIDT_DIR__.'/gedan_res/play_music.dat');
+       $music=rand(0,count(file(__MUSICLIDT_DIR__.'/gedan_res/play_music.dat')));
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=0&id='.$a[$music].'&auto='.$auto.'&height=32"></iframe>';
+       echo "\n";
+  } else 
+  if($type==0) {
+       $a=file(__MUSICLIDT_DIR__.'/gedan_res/play_music.dat');
+       $music=rand(0,count(file(__MUSICLIDT_DIR__.'/gedan_res/play_music.dat')));
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=110 src="https://music.163.com/outchain/player?type=0&id='.$a[$music].'&auto='.$auto.'&height=90"></iframe>';
+       echo "\n";
+  }
+  echo '  </div>';
+  ?>
+ <?php
     echo "\n  ";
     if($m == 1) {
       $live2d_status = false;
@@ -161,7 +116,7 @@
         if($website_icons == true) {
           echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();"><i class="mdui-icon material-icons fa-spin">face</i>&nbsp;&nbsp;随机网易云（'.online_users().'人在线）</button>';
         } else {
-        echo '  <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云（'.online_users().'人在线）</button>';
+        echo '    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云（'.online_users().'人在线）</button>';
         }
         echo "\n";
         echo '    </div>';
@@ -179,9 +134,9 @@
       if($website_feedback == 1) {
         echo '  <div class="mdui-dialog" id="feedback">';
         echo "\n  ";
-        echo '      <div class="mdui-dialog-title"><i class="mdui-icon material-icons mdui-text-color-blue">&#xe88f;</i> 是否反馈该歌曲?</div>';
+        echo '      <div class="mdui-dialog-title"><i class="mdui-icon material-icons mdui-text-color-blue">&#xe88f;</i> 是否反馈该歌单?</div>';
         echo "\n  ";
-        echo '      <div class="mdui-dialog-content">当网易云音乐无法播放时或者是音乐存在不适等，您可以向站长反馈该首歌曲。</div>';
+        echo '      <div class="mdui-dialog-content">当网易云歌单无法播放时或者是歌单存在不适等，您可以向站长反馈这个歌单。</div>';
         echo "\n  ";
         echo '      <div class="mdui-dialog-actions">';
         echo "\n  ";
@@ -197,7 +152,7 @@
         echo "\n";
         }
       if($live2d_status == true) {
-        echo '  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>';
+       echo '  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>';
         echo "\n";
       }
       if($texiao_dianji == 1) {
@@ -238,7 +193,7 @@
       }
     }
   ?>
-  <script type="text/javascript">
+  <script>
     L2Dwidget.init({
       "model": {
           <?php echo '"jsonPath": "'.$live2d_modelurl.'",'; ?>
@@ -275,7 +230,7 @@
         echo 'window.location.reload();';
         echo "\n";
       } else {
-        echo 'console.log("page load success!");';
+        echo 'console.log("page load success!")';
         echo "\n";
       }
     ?>
@@ -284,7 +239,7 @@
         
         var theid = <?php echo $a[$music]; ?>
         var feedback = new XMLHttpRequest();
-        feedback.open('get','/sendmail.php?type=1&song=' + song + '&mid=' + theid,true);
+        feedback.open('get','/sendmail.php?type=2&song=' + song + '&mid=' + theid,true);
         feedback.send();
         window.setTimeout("alert('感谢您的反馈！');",1000);
     };
