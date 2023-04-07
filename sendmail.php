@@ -1,9 +1,15 @@
 <?php
 namespace PHPMailer;
 
-require_once("./config.php");
-require_once("PHPMailer/PHPMailer.php");
-require_once("PHPMailer/class.smtp.php");
+// 载入目录配置文件
+require_once __DIR__.'/config.inc.php';
+
+// 载入网站配置文件
+require __CORE_DIR__.'/Config/config.php';
+
+// 载入公共函数文件
+require_once __INCLUDE_DIR__.'/PHPMailer/PHPMailer.php';
+require_once __INCLUDE_DIR__.'/PHPMailer/class.smtp.php';
 
 $mid = $_GET['mid'];
 $song = $_GET['song'];
