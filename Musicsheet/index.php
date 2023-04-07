@@ -38,6 +38,10 @@
         echo "\n";
       } else 
       if($m == 0) {
+        if($website_mdui2 == true) {
+            echo '<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/mdui-v1.0.2/mdui2.main.css">';
+            echo "\n    ";
+        }
         echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.7.6/css/layui.css">';
         echo "\n";
         echo '    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css">';
@@ -147,7 +151,7 @@
         echo "\n  ";
         echo '  </div>';
         echo "\n";
-        echo '    <button class="mdui-fab mdui-fab-fixed mdui-text-color-cyan mdui-color-blue-50" mdui-dialog="{target: \'#feedback\'}" style="bottom: 35px;"><i class="mdui-icon material-icons">&#xe163;</i></button>';
+        echo '  <button class="mdui-fab mdui-fab-fixed mdui-text-color-cyan mdui-color-blue-50" mdui-dialog="{target: \'#feedback\'}" style="bottom: 35px;"><i class="mdui-icon material-icons">&#xe163;</i></button>';
         echo "\n";
         }
       if($live2d_status == true) {
