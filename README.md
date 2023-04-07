@@ -83,6 +83,8 @@
 
 ## 更新日志
 
+2023-04-07： 新增MDUI框架新样式。
+
 2023-04-05： 移除按钮下调试模式。
 
 2023-04-05： 替换了反馈按钮入口。
@@ -130,4 +132,4 @@
 ##  开源许可
 [GPL 3.0](https://opensource.org/licenses/GPL-3.0)
 
-Copyright (C) 2022  [随机网易云](https:/lmusic.yunair.cn/).
+Copyright (C) 2019 - 2023  [随机网易云](https:/lmusic.yunair.cn/).
