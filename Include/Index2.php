@@ -155,39 +155,39 @@
        echo '  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>';
         echo "\n";
       }
-      if($texiao_dianji == 1) {
-        echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_dianji.js"></script>';
+      if($website_click == 1) {
+        echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/website_click.js"></script>';
         echo "\n";
       } else
-      if($texiao_dianji == 2) {
+      if($website_click == 2) {
         echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_aixin.js"></script>';
         echo "\n";
       } else
-      if($texiao_dianji == 3) {
+      if($website_click == 3) {
         echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yinghua.js"></script>';
         echo "\n";
       } else
-      if($texiao_dianji == 4) {
+      if($website_click == 4) {
         echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_zhizhu.js"></script>';
         echo "\n";
       } else
-      if($texiao_dianji == 5) {
+      if($website_click == 5) {
         echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_xiannu.js"></script>';
         echo "\n";
       } else
-      if($texiao_dianji == 6) {
+      if($website_click == 6) {
         echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_face.js"></script>';
         echo "\n";
       } else
-      if($texiao_dianji == 7) {
+      if($website_click == 7) {
         echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_paopao.js"></script>';
         echo "\n";
       } else
-      if($texiao_dianji == 8) {
+      if($website_click == 8) {
         echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_yanhua.js"></script>';
         echo "\n";
       } else
-      if($texiao_dianji == 9) {
+      if($website_click == 9) {
         echo '  <script src="https://fastly.jsdelivr.net/gh/yichen9247/Randmusic/assets/JavaScript/texiao_text.js"></script>';
         echo "\n";
       }
