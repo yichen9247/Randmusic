@@ -11,6 +11,9 @@ require __CORE_DIR__.'/Config/config.php';
 require_once __INCLUDE_DIR__.'/PHPMailer/PHPMailer.php';
 require_once __INCLUDE_DIR__.'/PHPMailer/class.smtp.php';
 
+// 载入接口防护文件
+include __INCLUDE_DIR__.'/Firewall/APIProtect.php';
+
 $mid = $_GET['mid'];
 $song = $_GET['song'];
 $GetUserIP = $_SERVER["REMOTE_ADDR"];
@@ -20,15 +23,15 @@ $mail->isSMTP();
 $mail->SMTPDebug = 1;
 $mail->CharSet = 'UTF-8';
 $mail->SMTPAuth = true;
-$mail->Host = $mail_host;
-$mail->Port = $mail_port;
-$mail->isHTML($mail_isHTML);
-$mail->From = $mail_fromuser;
+$mail->Host = $website_mail['mail_host'];
+$mail->Port = $website_mail['mail_port'];
+$mail->isHTML($website_mail['mail_isHTML']);
+$mail->From = $website_mail['mail_fromuser'];
 $mail->FromName = '随机网易云';
-$mail->addAddress($mail_adminmai);
-$mail->SMTPSecure = $mail_secure;
-$mail->Username = $mail_username;
-$mail->Password = $mail_password;
+$mail->addAddress($website_mail['mail_adminmai']);
+$mail->SMTPSecure = $website_mail['mail_secure'];
+$mail->Username = $website_mail['mail_username'];
+$mail->Password = $website_mail['mail_password'];
 
 if ($_GET['type'] == "" || $_GET['song'] == ""|| $_GET['mid'] == "") {
     echo 'ERROR非法请求！';
