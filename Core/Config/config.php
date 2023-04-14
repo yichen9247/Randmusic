@@ -4,12 +4,12 @@ try {
     
     # ==================== 以下为网站基础设置 ====================
     $website_config = array(
-        'website_url' => 'https://music.yunair.cn', # 请在这里填写网站链接
-        'website_click' => 8, # 1:气泡点击特效 2:爱心点击特效 3:樱花点击特效 4:蜘网点击特效 5:仙女点击特效 6:笑脸点击特效 7:泡泡点击特效 8:烟花点击特效 9:文字点击特效
+        'website_url' => 'http(s)://', # 请在这里填写网站链接
+        'website_click' => 0, # 1:气泡点击特效 2:爱心点击特效 3:樱花点击特效 4:蜘网点击特效 5:仙女点击特效 6:笑脸点击特效 7:泡泡点击特效 8:烟花点击特效 9:文字点击特效
         'website_icons' => false, # 按钮内旋转图标显示开关
-        'website_mdui2' => true, # 启用MDUI2样式（美化）
-        'website_feedback' => true, # 网站音乐反馈按钮开关
-        'website_online' => true, # 网站在线人数显示开关
+        'website_mdui2' => false, # 启用MDUI2样式（美化）
+        'website_feedback' => false, # 网站音乐反馈按钮开关
+        'website_online' => false, # 网站在线人数显示开关
         'website_recolor' => false # 网站全局黑白模式开关
     );
     // checkConfig($website_config);
@@ -17,7 +17,7 @@ try {
     # ==================== 以下为网站小娘设置 ====================
     
     $website_live2d = array(
-        'live2d_status' => true, # 看板娘Live2D显示开关
+        'live2d_status' => false, # 看板娘Live2D显示开关
         'live2d_width' => 100, # 看板娘宽度，默认是：100
         'live2d_height' => 200, # 看板娘高度，默认是：200
         'live2d_default' => 0.7, # 默认透明度：0.1-1.0
@@ -30,7 +30,7 @@ try {
     # ==================== 以下为网站加速设置 ====================
     
     $website_speed = array(
-        'website_cdn' => 4, # 0：默认，本服务器加载资源 1：Jsdelivr全球加速源 2.Jsdelivr国内加速源 3：Jsdelivr的CF加速源 4：自定义CDN源
+        'website_cdn' => 0, # 0：默认，本服务器加载资源 1：Jsdelivr全球加速源 2.Jsdelivr国内加速源 3：Jsdelivr的CF加速源 4：自定义CDN源
         'website_cdnurl' => 'https://yunairsite-1309511642.cos.ap-chengdu.myqcloud.com/163Music'
     );
     
@@ -49,10 +49,10 @@ try {
         'mail_port' => 25, # 邮件发送端口，详情请自行百度
         'mail_secure' => 'TLS', # 邮件发送协议：TLS/SSL
         'mail_isHTML' => true, # 设置邮件发送为HTML模式
-        'mail_adminmai' => '865252486@qq.com', # 管理员邮箱账号
+        'mail_adminmai' => '', # 管理员邮箱账号
         'mail_username' => 'yunairsite@163.com', # 邮箱账号/地址
-        'mail_password' => 'XVLIMOIUHROBCVFB', # 邮箱密码/授权码
-        'mail_fromuser' => 'yunairsite@163.com' # 邮箱地址/账号
+        'mail_password' => ', # 邮箱密码/授权码
+        'mail_fromuser' => '' # 邮箱地址/账号
     );
     // checkConfig($website_mail);
     
