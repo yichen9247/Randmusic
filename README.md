@@ -49,7 +49,7 @@
 2. CSS代码由scss编译成.min.css文件
 3. JS代码由minify压缩成.min.js文件
 
-## 项目目录介绍（非实时）
+## 项目目录介绍
 
 ├── assets 项目静态资源目录
 
