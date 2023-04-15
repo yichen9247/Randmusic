@@ -32,7 +32,7 @@ $mail->SMTPSecure = $website_mail['mail_secure'];
 $mail->Username = $website_mail['mail_username'];
 $mail->Password = $website_mail['mail_password'];
 
-if ($_GET['type'] == "" || $_GET['song'] == ""|| $_GET['mid'] == "") {
+if ($_GET['type'] == "" || $_GET['mid'] == "") {
     echo 'ERROR非法请求！';
 } else
 if ($_GET['type'] == 1) {
