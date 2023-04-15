@@ -26,7 +26,7 @@
     <meta property="og:title" content="随机网易云" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://p3.music.126.net/tBTNafgjNnTL1KlZMt7lVA==/18885211718935735.jpg" />
-    <?php echo '<meta property="og:url" content="'.$website_url.'/Musicsheet/" />'; ?>
+    <?php echo '<meta property="og:url" content="'.$website_url.'/index2.php" />'; ?>
 
 	<title>随机网易云</title>
     <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico?v20180823">
