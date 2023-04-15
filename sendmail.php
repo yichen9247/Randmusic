@@ -33,7 +33,11 @@ $mail->Username = $website_mail['mail_username'];
 $mail->Password = $website_mail['mail_password'];
 
 if ($_GET['type'] == "" || $_GET['mid'] == "") {
-    echo 'ERROR非法请求！';
+    //echo 'ERROR非法请求！';
+    die(json_encode(array(
+		'code' => 500,
+		'msg' => 'ERROR非法请求'
+	),320 | JSON_PRETTY_PRINT));
 } else
 if ($_GET['type'] == 1) {
     $song = $_GET['song'];
@@ -44,7 +48,11 @@ if ($_GET['type'] == 2) {
     $mail->Subject = '【随机网易云】反馈通知 IP：'.$GetUserIP;
     $mail->Body = '某热心网友反馈了歌单，该歌单可能有问题<br/><center><hr/>失效的ID ：'.$mid.'<hr/></center><br/>PS：请仔细核实该ID，若该ID确实已经失效，还请站长删除该ID以提升体验！<br/><br/>温馨提示：请将此邮箱加入到邮箱白名单，以免被当作成广告邮件！';
 } else {
-    echo 'ERROR非法请求！';
+    //echo 'ERROR非法请求！';
+    die(json_encode(array(
+		'code' => 500,
+		'msg' => 'ERROR非法请求'
+	),320 | JSON_PRETTY_PRINT));
 }
 
 $status = $mail->send();
