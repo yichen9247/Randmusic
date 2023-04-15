@@ -15,7 +15,6 @@ require_once __INCLUDE_DIR__.'/PHPMailer/class.smtp.php';
 include __INCLUDE_DIR__.'/Firewall/APIProtect.php';
 
 $mid = $_GET['mid'];
-$song = $_GET['song'];
 $GetUserIP = $_SERVER["REMOTE_ADDR"];
 
 $mail = new PHPMailer();
@@ -37,12 +36,13 @@ if ($_GET['type'] == "" || $_GET['song'] == ""|| $_GET['mid'] == "") {
     echo 'ERROR非法请求！';
 } else
 if ($_GET['type'] == 1) {
+    $song = $_GET['song'];
     $mail->Subject = '【随机网易云】反馈通知 IP：'.$GetUserIP;
     $mail->Body = '某热心网友反馈了音乐，该音乐可能有问题<br/><center><hr/>失效的ID ：['.$song.']'.$mid.'<hr/></center><br/>PS：请仔细核实该ID，若该ID确实已经失效，还请站长删除该ID以提升体验！<br/><br/>温馨提示：请将此邮箱加入到邮箱白名单，以免被当作成广告邮件！';
 } else 
 if ($_GET['type'] == 2) {
     $mail->Subject = '【随机网易云】反馈通知 IP：'.$GetUserIP;
-    $mail->Body = '某热心网友反馈了歌单，该歌单可能有问题<br/><center><hr/>失效的ID ：['.$song.']'.$mid.'<hr/></center><br/>PS：请仔细核实该ID，若该ID确实已经失效，还请站长删除该ID以提升体验！<br/><br/>温馨提示：请将此邮箱加入到邮箱白名单，以免被当作成广告邮件！';
+    $mail->Body = '某热心网友反馈了歌单，该歌单可能有问题<br/><center><hr/>失效的ID ：'.$mid.'<hr/></center><br/>PS：请仔细核实该ID，若该ID确实已经失效，还请站长删除该ID以提升体验！<br/><br/>温馨提示：请将此邮箱加入到邮箱白名单，以免被当作成广告邮件！';
 } else {
     echo 'ERROR非法请求！';
 }
