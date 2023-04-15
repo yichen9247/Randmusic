@@ -103,11 +103,6 @@
   }
   echo '  </div>';
   ?>
- <?php
-    echo "\n  ";
-    if($m == 1) {
-      $website_live2d['live2d_status'] = false;
-    } else
   <?php
     echo "\n  ";
     if($m == 1) {
