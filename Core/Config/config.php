@@ -31,14 +31,23 @@ try {
     
     $website_speed = array(
         'website_cdn' => 0, # 0：默认，本服务器加载资源 1：Jsdelivr全球加速源 2.Jsdelivr国内加速源 3：Jsdelivr的CF加速源 4：自定义CDN源
-        'website_cdnurl' => 'https://yunairsite-1309511642.cos.ap-chengdu.myqcloud.com/163Music'
+        'website_cdnurl' => 'http(s)://' #网站自定义CDN/COS源
+    );
+    
+    # ==================== 以下为组件样式设置 ====================
+    
+    $website_model = array(
+        'model_input' => 0, # 0：默认，MDUI样式输入框 1：Bootstrap式模态化输入框
     );
     
     # ==================== 以下为网站安全设置 ====================
     
     $website_webwaf = array(
-        'cc_project' => true, # 是否开启网站CC防护功能
-        'website_dissql' => true # 是否开启SQL防注入功能
+        'feed_backcode' => false, # 是否开启网站反馈验证码
+        'code_length' => 6, # 网站反馈验证码数字的长度
+        'cc_project' => false, # 是否开启网站CC防护功能
+        'api_project' => false, #是否开启接口CC防护功能
+        'website_dissql' => false # 是否开启SQL防注入功能
     );
     // checkConfig($website_webwaf);
     
@@ -50,8 +59,8 @@ try {
         'mail_secure' => 'TLS', # 邮件发送协议：TLS/SSL
         'mail_isHTML' => true, # 设置邮件发送为HTML模式
         'mail_adminmai' => '', # 管理员邮箱账号
-        'mail_username' => 'yunairsite@163.com', # 邮箱账号/地址
-        'mail_password' => ', # 邮箱密码/授权码
+        'mail_username' => '', # 邮箱账号/地址
+        'mail_password' => '', # 邮箱密码/授权码
         'mail_fromuser' => '' # 邮箱地址/账号
     );
     // checkConfig($website_mail);
