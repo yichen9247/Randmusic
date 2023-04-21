@@ -33,12 +33,14 @@ try {
         'website_cdn' => 0, # 0：默认，本服务器加载资源 1：Jsdelivr全球加速源 2.Jsdelivr国内加速源 3：Jsdelivr的CF加速源 4：自定义CDN源
         'website_cdnurl' => 'http(s)://' #网站自定义CDN/COS源
     );
+    // checkConfig($website_speed);
     
     # ==================== 以下为组件样式设置 ====================
     
     $website_model = array(
         'model_input' => 0, # 0：默认，MDUI样式输入框 1：Bootstrap式模态化输入框 2：LayUI式大众化输入框
     );
+    // checkConfig($website_model);
     
     # ==================== 以下为网站安全设置 ====================
     
