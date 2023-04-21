@@ -50,4 +50,12 @@ function timer_get( $display = 0, $precision = 3 ) {
     }
     return $r;
 }
+
+function rand_code($length) {
+    $str_code = "";
+    for($i= 0;$i < $length;$i++) {
+        $str_code .= rand(0,9);
+    }
+    return $str_code;
+}
 ?>

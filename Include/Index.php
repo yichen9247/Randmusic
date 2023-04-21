@@ -176,13 +176,35 @@
         echo '    </div>';
         echo "\n  ";
         }
-      if($website_config['website_feedback'] == 1) {
+      if($website_config['website_feedback'] == true) {
+        $back_code = rand_code($website_webwaf['code_length']);
         echo '  <div class="mdui-dialog" id="feedback">';
         echo "\n  ";
         echo '      <div class="mdui-dialog-title"><i class="mdui-icon material-icons mdui-text-color-blue">&#xe88f;</i> 是否反馈该歌曲?</div>';
         echo "\n  ";
-        echo '      <div class="mdui-dialog-content">当网易云音乐无法播放时或者是音乐存在不适等，您可以向站长反馈该首歌曲。</div>';
+        echo '      <div class="mdui-dialog-content">当网易云音乐无法播放时或者是音乐存在不适等，您可以向站长反馈该首歌曲。';
         echo "\n  ";
+        if($website_webwaf['feed_backcode'] == true) {
+            if($website_model['model_input'] == 1) {
+                echo '          <input type="backcode" class="form-control" id="backcode" aria-describedby="backcode" placeholder="请输入安全验证码：'.$back_code.'">';
+            } else {
+                echo '          <div class="mdui-textfield">';
+                echo "\n  ";
+                echo '              <input class="mdui-textfield-input" type="text" id="backcode" placeholder="请输入安全验证码：'.$back_code.'" maxlength="'.$website_webwaf['code_length'].'" pattern="[0-9]+"/>';
+                echo "\n  ";
+                echo '              <div class="mdui-textfield-error">请在上方输入正确的安全验证码</div>';
+                echo "\n  ";
+                echo '              <div class="mdui-textfield-helper">请在上方输入正确的安全验证码</div>';
+                echo "\n  ";
+                echo '          </div>';
+            }
+            echo "\n  ";
+            echo '      </div>';
+            echo "\n  ";
+        } else {
+            echo '  </div>';
+            echo "\n";
+        }
         echo '      <div class="mdui-dialog-actions">';
         echo "\n  ";
         echo '          <button id="n_feeback" class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>';
@@ -284,13 +306,19 @@
       }
     ?>
     function y_feedback() {
-        var song = <?php echo $song; ?>
-        
-        var theid = <?php echo $a[$music]; ?>
-        var feedback = new XMLHttpRequest();
-        feedback.open('get','/sendmail.php?type=1&song=' + song + '&mid=' + theid,true);
-        feedback.send();
-        window.setTimeout("alert('感谢您的反馈！');",1000);
+        var codeinput = document.getElementById("backcode");
+        var codevalue = codeinput.value;
+        if (codevalue != <?php echo $back_code; ?>) {
+            window.setTimeout("alert('请输入正确的安全验证码！');",500);
+        } else {
+            var song = <?php echo $song; ?>
+            
+            var theid = <?php echo $a[$music]; ?>
+            var feedback = new XMLHttpRequest();
+            feedback.open('get','/sendmail.php?type=1&song=' + song + '&mid=' + theid,true);
+            feedback.send();
+            window.setTimeout("alert('感谢您的反馈！');",1000);
+        }
     };
   </script>
   <?php
