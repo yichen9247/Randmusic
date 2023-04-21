@@ -230,4 +230,4 @@
 ##  项目开源许可
 [GPL 3.0](https://opensource.org/licenses/GPL-3.0)
 
-Copyright (C) 2019 - 2023  [随机网易云](https:/lmusic.yunair.cn/).
+Copyright (C) 2019 - 2023  [随机网易云](https://music.yunair.cn/).
