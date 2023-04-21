@@ -141,7 +141,10 @@
         echo "\n  ";
         if($website_webwaf['feed_backcode'] == true) {
             if($website_model['model_input'] == 1) {
-                echo '          <input type="backcode" class="form-control" id="backcode" aria-describedby="backcode" placeholder="请输入安全验证码：'.$back_code.'">';
+                echo '          <input type="backcode" class="form-control" id="backcode" placeholder="请输入安全验证码：'.$back_code.'">';
+            } else 
+            if($website_model['model_input'] == 2) {
+                echo '          <input type="text" id="backcode" class="layui-input" placeholder="请输入安全验证码：'.$back_code.'">';
             } else {
                 echo '          <div class="mdui-textfield">';
                 echo "\n  ";
