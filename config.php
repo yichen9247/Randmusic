@@ -16,3 +16,4 @@ if(file_exists(__CORE_DIR__.'/install.lock')){
 		
 	}
 }
+?>

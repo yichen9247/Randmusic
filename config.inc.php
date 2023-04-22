@@ -17,3 +17,5 @@ define('__INCLUDE_DIR__', './Include');
 
 /** 定义核心路径(相对路径) */
 define('__CORE_DIR__', './Core');
+
+?>
