@@ -99,21 +99,21 @@
        # 全部音乐[pure_music.dat]
        $a=file(__MUSICLIDT_DIR__.'/music_res/music_list.dat');
        $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/music_list.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=32"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=32"></iframe>';
        echo "\n";
      } else 
      if($song==1) {
        # 纯音类型[pure_music.dat]
        $a=file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat');
        $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=32"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=32"></iframe>';
        echo "\n";
      } else 
      if($song==2) {
        # 英文类型[english_music.dat]
        $a=file(__MUSICLIDT_DIR__.'/music_res/english_music.dat');
        $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/english_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=32"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=32"></iframe>';
        echo "\n";
      } else {
        # 加载失败[Error_LodeFaild]
@@ -125,21 +125,21 @@
        # 全部音乐[music_list.dat]
        $a=file(__MUSICLIDT_DIR__.'/music_res/music_list.dat');
        $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/music_list.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=66"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=66"></iframe>';
        echo "\n";
        } else
      if($song==1) {
        # 纯音类型[pure_music.dat]
        $a=file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat');
        $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=66"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=66"></iframe>';
        echo "\n";
        } else 
      if($song==2) {
        # 英文类型[english_music.dat]
        $a=file(__MUSICLIDT_DIR__.'/music_res/english_music.dat');
        $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/english_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.$a[$music].'&auto='.$auto.'&height=66"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=66"></iframe>';
        echo "\n";
        } else {
        # 加载失败[Error_LodeFaild]
@@ -300,7 +300,7 @@
   </script>
   <script type"text/javascript">
     <?php
-      if($a[$music]=="") {
+      if(trim($a[$music],"\n") == "") {
         echo 'window.location.reload();';
         echo "\n";
       } else {
@@ -314,9 +314,8 @@
         if (codevalue != <?php echo $back_code; ?>) {
             window.setTimeout("alert('请输入正确的安全验证码！');",500);
         } else {
-            var song = <?php echo $song; ?>
-            
-            var theid = <?php echo $a[$music]; ?>
+            var song = <?php echo $song; ?>;
+            var theid = <?php echo trim($a[$music],"\n"); ?>;
             var feedback = new XMLHttpRequest();
             feedback.open('get','/sendmail.php?type=1&song=' + song + '&mid=' + theid,true);
             feedback.send();
