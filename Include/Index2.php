@@ -259,7 +259,7 @@
         echo 'window.location.reload();';
         echo "\n";
       } else {
-        echo 'console.log("page load success!")';
+        echo 'console.log("page load success!");';
         echo "\n";
       }
     ?>
