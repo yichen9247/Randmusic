@@ -27,7 +27,7 @@
 
 #### 项目要求
 
-* PHP 版本 &ge; 7.2
+* PHP 版本 &ge; 7.0
 
 #### 使用说明
 
@@ -35,7 +35,6 @@
 * 首先在 `Core/Database/connect.php` 配置一下数据库信息
 * 然后在 `Core/Config/config.php` 配置一下信息即可使用
 * 随机网易云分支（歌单系统）路径：`/index2.php`
-* 发信接口默认开启保护模式，如需关闭请注释掉 `/sendmail.php` 的第`15` 行代码
 * 收集网易云音乐ID到 `Musicidlist/music_res` 和 `Musicidlist/gedan_res` 内
 * 如果您已经配置完成并且收集完成，那就开始使用吧！
 
