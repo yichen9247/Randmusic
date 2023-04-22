@@ -1,9 +1,9 @@
 <?php
 /*数据库配置*/
 $host = "localhost";
-$username = "163music";
-$password = "18008206332l";
-$dbname = "163music";
+$username = "";
+$password = "";
+$dbname = "";
 // 创建数据库连接
 @$db = new mysqli($host, $username, $password, $dbname);
 // 检测数据库连接
