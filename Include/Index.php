@@ -304,10 +304,12 @@
         echo 'window.location.reload();';
         echo "\n";
       } else {
-        echo 'console.log("page load success!");';
+        echo 'console.log("page load success!")';
         echo "\n";
       }
     ?>
+  </script>
+  <script type"text/javascript">
     function y_feedback() {
         var codeinput = document.getElementById("backcode");
         var codevalue = codeinput.value;

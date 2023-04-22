@@ -253,7 +253,6 @@
         }
     });
   </script>
-  </script>
   <script type"text/javascript">
     <?php
       if(trim($a[$music],"\n") == "") {
@@ -264,16 +263,17 @@
         echo "\n";
       }
     ?>
+  </script>
+  <script type"text/javascript">
     function y_feedback() {
         var codeinput = document.getElementById("backcode");
         var codevalue = codeinput.value;
         if (codevalue != <?php echo $back_code; ?>) {
             window.setTimeout("alert('请输入正确的安全验证码！');",500);
         } else {
-            var song = <?php echo $song; ?>;
             var theid = <?php echo trim($a[$music],"\n"); ?>;
             var feedback = new XMLHttpRequest();
-            feedback.open('get','/sendmail.php?type=1&song=' + song + '&mid=' + theid,true);
+            feedback.open('get','/sendmail.php?type=2&mid=' + theid,true);
             feedback.send();
             window.setTimeout("alert('感谢您的反馈！');",1000);
         }
