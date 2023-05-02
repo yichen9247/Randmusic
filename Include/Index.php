@@ -304,6 +304,8 @@
         echo 'window.location.reload();';
         echo "\n";
       } else {
+        $usertoken = md5(trim($a[$music],"\n"));
+        setcookie("usertoken",$usertoken,time()+1*1*1*30);
         echo 'console.log("page load success!");';
         echo "\n";
       }

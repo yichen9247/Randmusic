@@ -1,7 +1,7 @@
 <?php
 function online_users() {
     $filename=__INCLUDE_DIR__.'/Onlinecatch/online.txt';
-    $cookiename='Nanlon_OnLineCount';
+    $cookiename='OnLineCount';
     $onlinetime=30;
     $online=file($filename); 
     $nowtime=$_SERVER['REQUEST_TIME']; 
@@ -36,15 +36,15 @@ function online_users() {
                 fclose($fp); 
             } 
         } 
-        return "$total_online"; 
+        return "$total_online";
     }
     
 function timer_get( $display = 0, $precision = 3 ) {
     $timestart = $_SERVER ['REQUEST_TIME'];
-    $mtime     = explode( ' ', microtime() );
-    $timeend   = $mtime[1] + $mtime[0];
+    $mtime = explode(' ',microtime());
+    $timeend = $mtime[1] + $mtime[0];
     $timetotal = number_format( $timeend - $timestart, $precision );
-    $r         = $timetotal < 1 ? $timetotal * 1000 . " MS" : $timetotal . " S";
+    $r = $timetotal < 1 ? $timetotal * 1000 . " MS" : $timetotal . " S";
     if ( $display ) {
         echo $r;
     }
