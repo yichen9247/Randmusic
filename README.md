@@ -99,13 +99,17 @@
 
 ├── assets 项目静态资源目录
 
-│      ├── bootstrap Bootstrap框架目录
+│      ├── bootstrapv-4.0.2 Bootstrap框架目录
 
 │      ├── mdui-v1.0.2 MDUI框架目录
 
 │      ├── layui-v2.7.6 LayUI框架目录
 
 │      ├── JavaScript 网站特效文件目录
+
+│      ├── css 网站CSS样式文件目录
+
+│      ├── js 网站的JS资源文件目录
 
 │      ├── screenshot1.png 项目截图一
 
@@ -153,6 +157,8 @@
 
 ├── index2.php 歌单页面文件
 
+├── favicon.ico 网站图标图像
+
 ├── sendmail.php 邮件发送文件
 
 ├── 404.html 网站404默认页面
@@ -164,6 +170,8 @@
 ## 项目更新日志
 
 #### V2.0版本更新日志
+
+2023-05-06： 新增了加速资源支持。
 
 2023-05-01： 优化了接口的安全性。
 
