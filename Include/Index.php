@@ -29,12 +29,14 @@
     <!-- Open Graph on SEO -->
     <meta property="og:title" content="随机网易云" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://p3.music.126.net/tBTNafgjNnTL1KlZMt7lVA==/18885211718935735.jpg" />
+    <?php echo '<meta property="og:image" content="'.$cdn_url.'/assets/163music.jpg" />'; ?>
+    
     <?php echo '<meta property="og:url" content="'.$website_config['website_url'].'" />'; ?>
     
     <meta property="og:site_name" content="随机网易云"/>
 	<title>随机网易云</title>
-    <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico">
+    <?php echo '<link rel="shortcut icon" href="'.$cdn_url.'/favicon.ico">'; ?>
+    
     <?php
       if($m == 1) {
         echo "\n";
@@ -48,7 +50,7 @@
         echo "\n";
         echo '    <link rel="stylesheet" href="'.$cdn_url.'/assets/mdui-v1.0.2/css/mdui.min.css">';
         echo "\n";
-        echo '    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">';
+        echo '    <link rel="stylesheet" href="'.$cdn_url.'/assets/bootstrap-v4.6.2/css/bootstrap.min.css">';
         echo "\n";
         if($website_config['website_icons'] == true) {
           echo '    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">';
