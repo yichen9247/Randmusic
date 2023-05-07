@@ -3,6 +3,7 @@
 > 一款基于网易云音乐嵌入型随机音乐播放器
 
 - QQ交流群：786664852
+- 项目文档：https://yunair.site
 - 官方演示：https://music.yunair.cn
 - Gitub仓库：https://github.com/yichen9247/Randmusic
 - 项目宗旨：简洁、超强、开源、精华、随机
@@ -99,17 +100,13 @@
 
 ├── assets 项目静态资源目录
 
-│      ├── bootstrapv-4.0.2 Bootstrap框架目录
+│      ├── bootstrap Bootstrap框架目录
 
 │      ├── mdui-v1.0.2 MDUI框架目录
 
 │      ├── layui-v2.7.6 LayUI框架目录
 
 │      ├── JavaScript 网站特效文件目录
-
-│      ├── css 网站CSS样式文件目录
-
-│      ├── js 网站的JS资源文件目录
 
 │      ├── screenshot1.png 项目截图一
 
@@ -157,8 +154,6 @@
 
 ├── index2.php 歌单页面文件
 
-├── favicon.ico 网站图标图像
-
 ├── sendmail.php 邮件发送文件
 
 ├── 404.html 网站404默认页面
@@ -171,7 +166,7 @@
 
 #### V2.0版本更新日志
 
-2023-05-06： 新增了加速资源支持。
+2023-05-07： 部分细节进行了优化。
 
 2023-05-01： 优化了接口的安全性。
 
