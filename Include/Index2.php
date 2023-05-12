@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <?php
+    ob_start();
     $m = $_GET["m"];
     if($m=="") {
       $m = 0;
@@ -43,7 +44,7 @@
         echo "\n";
         echo '    <link rel="stylesheet" href="'.$cdn_url.'/assets/mdui-v1.0.2/css/mdui.min.css">';
         echo "\n";
-        echo '    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">';
+        echo '    <link rel="stylesheet" href="'.$cdn_url.'/assets/bootstrap-v4.6.2/css/bootstrap.min.css">';
         echo "\n";
         if($website_config['website_icons'] == true) {
           echo '    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">';
