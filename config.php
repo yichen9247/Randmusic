@@ -11,9 +11,6 @@ require_once __INCLUDE_DIR__.'/Functions.php';
 
 if(file_exists(__CORE_DIR__.'/install.lock')){
 	if(file_exists(__CORE_DIR__.'/Database/connect.php')){
-		// 连接数据库
 		require_once __CORE_DIR__.'/Database/connect.php';
-		
 	}
 }
-?>
