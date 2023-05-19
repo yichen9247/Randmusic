@@ -1,7 +1,7 @@
 <?php
-function checkConfig($config) {
+function checkConfig() {
     $url_rule = '/^(http|https):\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\’:+!]*([^<>\”])*$/';
-    if(preg_match($url_rule,$config['website_url'])) {
+    if(preg_match($url_rule,$website_config['website_url'])) {
     } else {
         throw new Exception ("网站URL地址配置错误");
     }
