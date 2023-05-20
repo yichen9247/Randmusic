@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
   <?php
     ob_start();
     $m = $_GET["m"];
@@ -28,28 +28,27 @@
     <meta name="keywords" content="随机网易云" />
     <meta name="description" content="随机网易云是一款随机获取网易云歌曲和歌单的播放器，适合个人博客站长嵌入网页。" />
     <!-- Open Graph on SEO -->
-    <meta property="og:title" content="随机网易云" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://p3.music.126.net/tBTNafgjNnTL1KlZMt7lVA==/18885211718935735.jpg" />
-    <?php echo '<meta property="og:url" content="'.$website_config['website_url'].'" />'; ?>
-    
+    <meta property="og:title" content="随机网易云" />
     <meta property="og:site_name" content="随机网易云"/>
+    <meta property="og:url" content="<?php echo $website_config['website_url']; ?>" />
+    <meta property="og:image" content="http://p3.music.126.net/tBTNafgjNnTL1KlZMt7lVA==/18885211718935735.jpg" />
 	<title>随机网易云</title>
-    <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo $cdn_url; ?>/favicon.ico">
     <?php
       if ($m == 1) {
           echo "\n";
       } else 
       if ($m == 0) {
         if ($website_config['website_mdui2'] == true) {
-            echo '<link rel="stylesheet" href="'.$cdn_url.'/assets/mdui-v1.0.2/mdui2.main.css">';
+            echo '<link rel="stylesheet" href="'.$cdn_url.'/Assets/mdui-v1.0.2/mdui2.main.css">';
             echo "\n    ";
         }
-        echo '<link rel="stylesheet" href="'.$cdn_url.'/assets/layui-v2.7.6/css/layui.css">';
+        echo '<link rel="stylesheet" href="'.$cdn_url.'/Assets/layui-v2.7.6/css/layui.css">';
         echo "\n";
-        echo '    <link rel="stylesheet" href="'.$cdn_url.'/assets/mdui-v1.0.2/css/mdui.min.css">';
+        echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/mdui-v1.0.2/css/mdui.min.css">';
         echo "\n";
-        echo '    <link rel="stylesheet" href="'.$cdn_url.'/assets/bootstrap-v4.6.2/css/bootstrap.min.css">';
+        echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/bootstrap-v4.6.2/css/bootstrap.min.css">';
         echo "\n";
         if($website_config['website_icons'] == true) {
             echo '    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">';
@@ -100,21 +99,21 @@
        # 全部音乐[pure_music.dat]
        $a = file(__MUSICLIDT_DIR__.'/music_res/music_list.dat');
        $music = rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/music_list.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=32"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=32"></iframe>';
        echo "\n";
      } else 
      if ($song == 1) {
        # 纯音类型[pure_music.dat]
        $a = file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat');
        $music = rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=32"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=32"></iframe>';
        echo "\n";
      } else 
      if ($song == 2) {
        # 英文类型[english_music.dat]
        $a = file(__MUSICLIDT_DIR__.'/music_res/english_music.dat');
        $music = rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/english_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=32"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=32"></iframe>';
        echo "\n";
      } else {
        # 加载失败[Error_LodeFaild]
@@ -126,21 +125,21 @@
        # 全部音乐[music_list.dat]
        $a = file(__MUSICLIDT_DIR__.'/music_res/music_list.dat');
        $music=rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/music_list.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=66"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=66"></iframe>';
        echo "\n";
        } else
      if ($song == 1) {
        # 纯音类型[pure_music.dat]
        $a = file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat');
        $music = rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/pure_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=66"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=66"></iframe>';
        echo "\n";
        } else 
      if ($song == 2) {
        # 英文类型[english_music.dat]
        $a = file(__MUSICLIDT_DIR__.'/music_res/english_music.dat');
        $music = rand(0,count(file(__MUSICLIDT_DIR__.'/music_res/english_music.dat')));
-       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=66"></iframe>';
+       echo '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id='.trim($a[$music],"\n").'&auto='.$auto.'&height=66"></iframe>';
        echo "\n";
        } else {
        # 加载失败[Error_LodeFaild]
@@ -335,12 +334,12 @@
     } else 
     if ($m == 0) {
         if ($website_config['website_rejquery'] == true) {
-            echo '  <script src="'.$cdn_url.'/assets/mdui-v1.0.2/js/mdui.min.js"></script>';
+            echo '<script src="'.$cdn_url.'/Assets/mdui-v1.0.2/js/mdui.min.js"></script>';
             echo "\n";
         } else {
-            echo '<script src="'.$cdn_url.'/assets/js/jquery.min.js"></script>';
+            echo '<script src="'.$cdn_url.'/Assets/js/jquery.min.js"></script>';
             echo "\n";
-            echo '  <script src="'.$cdn_url.'/assets/mdui-v1.0.2/js/mdui.min.js"></script>';
+            echo '<script src="'.$cdn_url.'/Assets/mdui-v1.0.2/js/mdui.min.js"></script>';
             echo "\n";
         }
     }
