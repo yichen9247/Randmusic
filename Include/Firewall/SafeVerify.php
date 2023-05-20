@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
     <?php ob_start(); ?>
 <head>
 	    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -7,14 +7,14 @@
 	    <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico">
 	    <?php 
 	        if ($website_config['website_mdui2'] == true) {
-                echo '<link rel="stylesheet" href="'.$cdn_url.'/assets/mdui-v1.0.2/mdui2.main.css">';
+                echo '<link rel="stylesheet" href="'.$cdn_url.'/Assets/mdui-v1.0.2/mdui2.main.css">';
                 echo "\n    ";
 	        }
-	        echo '    <link rel="stylesheet" href="'.$cdn_url.'/assets/layui-v2.7.6/css/layui.css">';
+	        echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/layui-v2.7.6/css/layui.css">';
             echo "\n    ";
-            echo '    <link rel="stylesheet" href="'.$cdn_url.'/assets/mdui-v1.0.2/css/mdui.min.css">';
+            echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/mdui-v1.0.2/css/mdui.min.css">';
             echo "\n    ";
-            echo '    <link rel="stylesheet" href="'.$cdn_url.'/assets/bootstrap-v4.6.2/css/bootstrap.min.css">';
+            echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/bootstrap-v4.6.2/css/bootstrap.min.css">';
             echo "\n";
 	    ?>
 	</head>
@@ -94,9 +94,9 @@
         };
   </script>
   <?php
-    echo '<script src="'.$cdn_url.'/assets/js/jquery.min.js"></script>';
+    echo '<script src="'.$cdn_url.'/Assets/js/jquery.min.js"></script>';
     echo "\n";
-    echo '  <script src="'.$cdn_url.'/assets/mdui-v1.0.2/js/mdui.min.js"></script>';
+    echo '  <script src="'.$cdn_url.'/Assets/mdui-v1.0.2/js/mdui.min.js"></script>';
     echo "\n";
   ?>
 </html>
