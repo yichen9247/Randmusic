@@ -48,6 +48,7 @@
           echo "\n";
           if ($website_config['website_icons'] == true) {
               echo '    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">';
+              echo "\n";
           }
       }
     ?>
