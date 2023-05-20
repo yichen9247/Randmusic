@@ -98,7 +98,7 @@
 
 ## 项目目录介绍
 
-├── assets 项目静态资源目录
+├── Assets 项目静态资源目录
 
 │      ├── bootstrap Bootstrap框架目录
 
