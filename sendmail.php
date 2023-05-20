@@ -1,4 +1,5 @@
 <?php
+
 namespace PHPMailer;
 
 // 载入目录配置文件
@@ -60,4 +61,5 @@ if ($_GET['type'] == 2) {
 }
 
 $status = $mail->send();
+
 ?>

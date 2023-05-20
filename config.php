@@ -14,3 +14,5 @@ if(file_exists(__CORE_DIR__.'/install.lock')){
 		require_once __CORE_DIR__.'/Database/connect.php';
 	}
 }
+
+?>
