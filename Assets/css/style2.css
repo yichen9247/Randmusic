@@ -7,7 +7,7 @@
  **/
 
 :root {
-    --default_height: 86px;
+    --default_height: 110px;
     --default_fontsize: 2rem;
     --default_transition: 0.5s;
     --default_border: #f0fff0;
@@ -79,7 +79,7 @@ body {
 #buton-sheet {
     width: 99%;
     margin: 0 auto;
-    margin-top: calc(86px + 10px);
+    margin-top: calc(110px + 10px);
 }
 
 #buton-sheet .reflash_button {
