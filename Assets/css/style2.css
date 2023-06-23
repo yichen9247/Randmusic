@@ -76,13 +76,13 @@ body {
     position: absolute;
 }
 
-#buton-sheet {
+#button-sheet {
     width: 99%;
     margin: 0 auto;
     margin-top: calc(110px + 10px);
 }
 
-#buton-sheet .reflash_button {
+#button-sheet .reflash_button {
     width: 100%;
     height: auto;
 }
