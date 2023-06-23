@@ -264,7 +264,7 @@
 
       switch ($website_config['website_click']) {
         case 1:
-            echo '  <script src="'.$cdn_url.'/Assets/JavaScript/website_click.js"></script>';
+            echo '  <script src="'.$cdn_url.'/Assets/JavaScript/texiao_dianji.js"></script>';
             echo "\n";
             break;
         case 2:
