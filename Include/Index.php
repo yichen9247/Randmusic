@@ -84,21 +84,21 @@
   
   <?php
     if ($dark == 0) {
-        echo '<body>';
+        echo '<body style="overflow: visible;">';
         echo "\n";
         echo " ";
     } else
     if ($dark == 1) {
-        echo '<body class="mdui-theme-layout-dark">';
+        echo '<body class="mdui-theme-layout-dark" style="overflow: visible;">';
         echo "\n";
         echo " ";
     } else 
     if($dark == 2) {
-        echo '<body class="0" style="background-color:black;">';
+        echo '<body class="0" style="background-color:black; overflow: visible;">';
         echo "\n";
         echo " ";
     } else {
-        echo '<body>';
+        echo '<body style="overflow: visible;">';
         echo "\n";
         echo " ";
   }
