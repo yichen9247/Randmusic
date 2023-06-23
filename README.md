@@ -52,6 +52,12 @@
 
 ## 建议覆盖文件
 
+├── Assets 项目静态资源目录
+
+│      ├── css 网站CSS静态文件目录
+
+│      └── js 网站JAVASCRIPT静态文件目录
+
 ├── Core 网站核心文件目录
 
 │      ├── Config 网站信息配置目录
@@ -99,6 +105,10 @@
 ## 项目目录介绍
 
 ├── Assets 项目静态资源目录
+
+│      ├── css 网站CSS静态文件目录
+
+│      ├── js 网站JAVASCRIPT静态文件目录
 
 │      ├── bootstrap Bootstrap框架目录
 
