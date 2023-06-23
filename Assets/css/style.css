@@ -79,6 +79,7 @@ body {
 #button-sheet {
     width: 99%;
     margin: 0 auto;
+    overflow: visible;
     margin-top: calc(86px + 10px);
 }
 
