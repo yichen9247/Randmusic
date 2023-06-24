@@ -19,12 +19,14 @@
     padding: 0;
     overflow: hidden;
     white-space: nowrap;
+    cursor: url(../images/normal.cur),default;
 }
 
 body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    cursor: url(../images/normal.cur),default;
 }
 
 #music_player {
@@ -86,4 +88,9 @@ body {
 #button-sheet .reflash_button {
     width: 100%;
     height: auto;
+    cursor: url(../images/link.cur),pointer;
+}
+
+#copyright-relode,#feedback_btn,#n_feeback,#y_feedback,#backcode {
+    cursor: url(../images/link.cur),pointer;
 }
