@@ -9,8 +9,7 @@
  * @param int $code 状态码
  * @param string $msg 状态信息
  */
-function jsonError($code, $msg)
-{
+function jsonError($code, $msg) {
 	die(json_encode(array(
 		'code' => $code,
 		'msg' => $msg
@@ -23,8 +22,7 @@ function jsonError($code, $msg)
  * @param string $msg 状态信息
  * @param string/array $data 数据
  */
-function json($code, $msg, $data)
-{
+function json($code, $msg, $data) {
 	die(json_encode(array(
 		'code' => $code,
 		'msg' => $msg,
@@ -36,8 +34,7 @@ function json($code, $msg, $data)
  * 判断用户是否登录到后台
  *	@return bool 是否登录
  */
-function isAdmin()
-{
+function isAdmin() {
 	session_start();
 	$apikey = @include __DIR__ . '/../Core/Config/apikey.php';
 	if ($_SESSION['login'] == 'admin') {
@@ -53,8 +50,7 @@ function isAdmin()
  * 清除登录session（退出登录）
  *	@return bool 清除是否成功
  */
-function clearAdmin()
-{
+function clearAdmin() {
 	session_start();
 	if ($_SESSION['login'] == 'admin') {
 		unset($_SESSION['login']);
@@ -68,8 +64,7 @@ function clearAdmin()
  * 添加访问记录
  * @return bool 添加是否成功
  */
-function addAccess()
-{
+function addAccess() {
 	require __CORE_DIR__ . '/Database/connect.php';
 
 	$host = $_SERVER["HTTP_HOST"] . $_SERVER["SCRIPT_NAME"] . '?' . $_SERVER['QUERY_STRING'];
@@ -91,8 +86,7 @@ function addAccess()
  * @param string $email
  * @return bool
  */
-function checkEmail($email)
-{
+function checkEmail($email) {
 	$result = trim($email);
 	if (filter_var($result, FILTER_VALIDATE_EMAIL)) {
 		return true;
@@ -106,8 +100,7 @@ function checkEmail($email)
  * @param $domain string 域名
  * @return bool true授权，false未授权
  */
-function domainAuth($domain)
-{
+function domainAuth($domain) {
     return true;
 }
 
@@ -115,8 +108,7 @@ function domainAuth($domain)
  * 获取用户的真实ip
  * @return string 用户IP
  */
-function getUserIp()
-{
+function getUserIp() {
 	$ip = false;
 	if (!empty($_SERVER["HTTP_CLIENT_IP"])) {
 		$ip = $_SERVER["HTTP_CLIENT_IP"];
@@ -143,8 +135,7 @@ function getUserIp()
  * @param array $headers 头
  * @param array $params 参数
  */
-function curl($url, $method, $headers, $params)
-{
+function curl($url, $method, $headers, $params) {
 	if (is_array($params)) {
 		$requestString = http_build_query($params);
 	} else {
