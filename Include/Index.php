@@ -191,9 +191,9 @@
         $live2d_vOffset = -50;
         if ($website_config['website_online'] == true) {
             if ($website_config['website_icons'] == true) {
-                echo '    <button id="copyright-relode" class="reflash_button btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();"><i class="mdui-icon material-icons fa-spin">face</i>&nbsp;&nbsp;随机网易云（'.online_users().'人在线）</button>';
+                echo '    <button id="copyright-relode" class="reflash_button button btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();"><i class="mdui-icon material-icons fa-spin">face</i>&nbsp;&nbsp;随机网易云（'.online_users().'人在线）</button>';
             } else {
-                echo '    <button id="copyright-relode" class="reflash_button btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云（'.online_users().'人在线）</button>';
+                echo '    <button id="copyright-relode" class="reflash_button button btn btn-outline-info btn-lg btn-block mdui-ripple" onclick="javascript:window.location.reload();">随机网易云（'.online_users().'人在线）</button>';
             }
             echo "\n";
             echo '    </div>';
@@ -253,7 +253,7 @@
           echo "\n  ";
           echo '  </div>';
           echo "\n";
-          echo '  <button class="mdui-fab mdui-fab-fixed mdui-text-color-cyan mdui-color-blue-50" mdui-dialog="{target: \'#feedback\'}" style="bottom: 35px;"><i class="mdui-icon material-icons">&#xe163;</i></button>';
+          echo '  <button id="feedback_btn" class="mdui-fab mdui-fab-fixed mdui-text-color-cyan mdui-color-blue-50" mdui-dialog="{target: \'#feedback\'}" style="bottom: 35px;"><i class="mdui-icon material-icons">&#xe163;</i></button>';
           echo "\n";
       }
 
