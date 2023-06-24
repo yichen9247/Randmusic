@@ -56,6 +56,8 @@
 
 │      ├── css 网站CSS静态文件目录
 
+│      ├── images 网站静态图片目录
+
 │      └── js 网站JAVASCRIPT静态文件目录
 
 ├── Core 网站核心文件目录
@@ -107,6 +109,8 @@
 ├── Assets 项目静态资源目录
 
 │      ├── css 网站CSS静态文件目录
+
+│      ├── images 网站静态图片目录
 
 │      ├── js 网站JAVASCRIPT静态文件目录
 
