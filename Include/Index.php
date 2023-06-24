@@ -64,11 +64,11 @@
       echo '<style type="text/css">';
       echo "\n    ";
       if ($type == 1) {
-        echo ':root { --default_height: 32px; --default_fontsize: 1.5rem;}';
+        echo ':root {--default_height: 52px; --default_fontsize: 1.5rem;}';
         echo "\n";
       }
       if ($dark != 0) {
-        echo ':root { --default_color: transparent; --default_border: transparent;}';
+        echo ':root {--default_color: transparent; --default_border: transparent;}';
         echo "\n";
       }
       if ($website_config['website_recolor'] == true) {
