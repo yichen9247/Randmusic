@@ -1,4 +1,5 @@
 <?php
+
 // 开始SESSION会话
 session_start();
 // 获取当前的时间戳
@@ -39,3 +40,5 @@ if (($api_nowtime - $api_lasttime) < 30) {
 	$_SESSION['api_lasttime'] = $api_nowtime;
 	$_SESSION['api_times'] = $api_times;
 }
+
+?>

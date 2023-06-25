@@ -2,21 +2,21 @@
 <html lang="zh-CN">
     <?php ob_start(); ?>
 <head>
-	    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	    <title>网站安全验证</title>
-	    <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico">
-	    <?php 
-	        if ($website_config['website_mdui2'] == true) {
-                echo '<link rel="stylesheet" href="'.$cdn_url.'/Assets/mdui-v1.0.2/mdui2.main.css">';
-                echo "\n    ";
-	        }
-	        echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/layui-v2.7.6/css/layui.css">';
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>网站安全验证</title>
+	<link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico">
+	<?php 
+        if ($website_config['website_mdui2'] == true) {
+            echo '<link rel="stylesheet" href="'.$cdn_url.'/Assets/mdui-v1.0.2/mdui2.main.css">';
             echo "\n    ";
-            echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/mdui-v1.0.2/css/mdui.min.css">';
-            echo "\n    ";
-            echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/bootstrap-v4.6.2/css/bootstrap.min.css">';
-            echo "\n";
-	    ?>
+        }
+        echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/layui-v2.7.6/css/layui.css">';
+        echo "\n    ";
+        echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/mdui-v1.0.2/css/mdui.min.css">';
+        echo "\n    ";
+        echo '    <link rel="stylesheet" href="'.$cdn_url.'/Assets/bootstrap-v4.6.2/css/bootstrap.min.css">';
+        echo "\n";
+	?>
 	</head>
 	<?php
         if ($website_config['website_recolor'] == true) {
@@ -29,15 +29,15 @@
         echo "\n";
     ?>
 	<body>
-	    <div class="mdui-typo-display-1-opacity" style="text-align: center; margin-top: 10px">综合网站安全验证</div>
-	    <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" style="margin-top: 30px" mdui-dialog="{target: '#go-verify'}">请点击此处完成验证</button>
-	    <div class="mdui-dialog" id="go-verify">
-	        <div class="mdui-dialog-title">综合网站安全验证</div>
-	        <div class="mdui-dialog-content">为什么会跳转到此处页面，因为您的访问频率过高，触发了网站安全保护机制，请在<span style="color: red">30秒内</span>完成验证。
-	        <?php
-	            $verify_code = rand_code($website_webwaf['code_length']);
-	            if ($website_model['model_input'] == 1) {
-	                echo "   ";
+        <div class="mdui-typo-display-1-opacity" style="text-align: center; margin-top: 10px">综合网站安全验证</div>
+        <button id="copyright-relode" class="btn btn-outline-info btn-lg btn-block mdui-ripple" style="margin-top: 30px" mdui-dialog="{target: '#go-verify'}">请点击此处完成验证</button>
+        <div class="mdui-dialog" id="go-verify">
+            <div class="mdui-dialog-title">综合网站安全验证</div>
+            <div class="mdui-dialog-content">为什么会跳转到此处页面，因为您的访问频率过高，触发了网站安全保护机制，请在<span style="color: red">30秒内</span>完成验证。
+            <?php
+                $verify_code = rand_code($website_webwaf['code_length']);
+                if ($website_model['model_input'] == 1) {
+                    echo "   ";
                     echo '  <input type="verifycode" class="form-control" id="backcode" placeholder="请输入安全验证码：'.$verify_code.'">';
                 } else 
                 if ($website_model['model_input'] == 2) {
@@ -56,21 +56,21 @@
                     echo '              </div>';
                     echo "\n  ";
                 }
-	        ?>
-	        </div>
-	        <div class="mdui-dialog-actions">
-	            <button id="n_feeback" class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
-	            <button id="y_feedback" class="mdui-btn mdui-ripple" onclick="y_goverify()" mdui-dialog-confirm>提交</button>
-	       </div>
-	   </div>
+            ?>
+            </div>
+            <div class="mdui-dialog-actions">
+                <button id="n_feeback" class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+                <button id="y_feedback" class="mdui-btn mdui-ripple" onclick="y_goverify()" mdui-dialog-confirm>提交</button>
+            </div>
+        </div>
 	</body>
 	<script type="text/javascript">
-	    <?php 
-	        if ($userkey == md5("yichen9247")) {
-	            $vertoken = md5($verify_code);
+        <?php 
+            if ($userkey == md5("yichen9247")) {
+                $vertoken = md5($verify_code);
                 setcookie("vertoken",$vertoken,time()+1*1*1*30);
-	        }
-	    ?>
+            }
+        ?>
 	</script>
 	<script type"text/javascript">
         function y_goverify() {

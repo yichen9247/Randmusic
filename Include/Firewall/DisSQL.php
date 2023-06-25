@@ -1,4 +1,5 @@
 <?php
+
 foreach ($_REQUEST as $key => $value) {
     $value = addslashes($value);
     $value = str_replace("%", "\%", $value); // 把' % '过滤掉    
@@ -6,6 +7,7 @@ foreach ($_REQUEST as $key => $value) {
     $value = htmlspecialchars($value); // html标记转换
     $_REQUEST[$key] = $value;
 }
+
 foreach ($_GET as $key => $value) {
     $value = addslashes($value);
     $value = str_replace("%", "\%", $value); // 把' % '过滤掉    
@@ -13,6 +15,7 @@ foreach ($_GET as $key => $value) {
     $value = htmlspecialchars($value); // html标记转换
     $_GET[$key] = $value;
 }
+
 foreach ($_POST as $key => $value) {
     $value = addslashes($value);
     $value = str_replace("%", "\%", $value); // 把' % '过滤掉    
@@ -20,3 +23,6 @@ foreach ($_POST as $key => $value) {
     $value = htmlspecialchars($value); // html标记转换
     $_POST[$key] = $value;
 }
+
+
+?>
