@@ -313,11 +313,11 @@
         },
       "display": {
           <?php echo '"position": "'.$website_live2d['live2d_position'].'",'; ?>
-           
+
           <?php echo '"width": '.$website_live2d['live2d_width'].','; ?>
-           
+
           <?php echo '"height": '.$website_live2d['live2d_height'].','; ?>
-                     
+
           "hOffset": 0,
           <?php echo '"vOffset": '.$live2d_vOffset.''; ?>
                     
@@ -329,7 +329,7 @@
         },
       "react": {
           <?php echo '"opacityDefault": '.$website_live2d['live2d_default'].','; ?>
-           
+
           <?php echo '"opacityOnHover": '.$website_live2d['live2d_onhover'].','; ?>
           
         }
