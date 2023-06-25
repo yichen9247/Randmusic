@@ -24,7 +24,7 @@
         <meta name="keywords" content="随机网易云" />
         <meta name="description" content="随机网易云是一款随机获取网易云歌曲和歌单的播放器，适合个人博客站长嵌入网页。" />
         <!-- Open Graph on SEO -->
-    <meta property="og:type" content="website" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="随机网易云" />
         <meta property="og:site_name" content="随机网易云"/>
         <meta property="og:url" content="<?php echo $website_config['website_url']; ?>" />
